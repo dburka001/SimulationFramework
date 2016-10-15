@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroSimFramework", "MicroSimFramework\MicroSimFramework.csproj", "{B575BD81-7EBC-4F3A-AB2E-E01F51ECA60B}"
 EndProject
@@ -12,6 +12,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroSimCodeBuilder", "MicroSimCodeBuilder\MicroSimCodeBuilder.csproj", "{B42B7E13-3AD4-4AFA-9E35-BB3F1F9F64BE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroSimResults", "MicroSimResults\MicroSimResults.csproj", "{E21A5FA2-AE8D-4B7F-B113-1FDE51F35D1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroSimulation.Tests", "MicroSimulation.Tests\MicroSimulation.Tests.csproj", "{FC007025-9790-42B7-A0F7-7837CD5ABB0A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6E596FDF-760F-4F12-96FB-4B7EAA3845F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,8 +65,19 @@ Global
 		{E21A5FA2-AE8D-4B7F-B113-1FDE51F35D1F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E21A5FA2-AE8D-4B7F-B113-1FDE51F35D1F}.Release|x64.ActiveCfg = Release|x64
 		{E21A5FA2-AE8D-4B7F-B113-1FDE51F35D1F}.Release|x64.Build.0 = Release|x64
+		{FC007025-9790-42B7-A0F7-7837CD5ABB0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC007025-9790-42B7-A0F7-7837CD5ABB0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC007025-9790-42B7-A0F7-7837CD5ABB0A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FC007025-9790-42B7-A0F7-7837CD5ABB0A}.Debug|x64.Build.0 = Debug|Any CPU
+		{FC007025-9790-42B7-A0F7-7837CD5ABB0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC007025-9790-42B7-A0F7-7837CD5ABB0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC007025-9790-42B7-A0F7-7837CD5ABB0A}.Release|x64.ActiveCfg = Release|Any CPU
+		{FC007025-9790-42B7-A0F7-7837CD5ABB0A}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FC007025-9790-42B7-A0F7-7837CD5ABB0A} = {6E596FDF-760F-4F12-96FB-4B7EAA3845F9}
 	EndGlobalSection
 EndGlobal

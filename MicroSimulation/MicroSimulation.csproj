@@ -39,7 +39,7 @@
     <OutputPath>bin\x64\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
@@ -64,6 +64,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Other\ThreadSafeEnumerator.cs" />
+    <Compile Include="Other\ThreadSafeList.cs" />
     <Compile Include="Compilers\ExtensionMethods.cs" />
     <Compile Include="Compilers\ClassCompiler.cs" />
     <Compile Include="Compilers\Compiler.cs" />
