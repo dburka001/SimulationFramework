@@ -37,6 +37,7 @@
 *.pdb
 *.FileListAbsolute.txt
 **/.vs/
+/packages/
 
 
 #
