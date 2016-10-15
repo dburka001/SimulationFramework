@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Simulation</title>
+    <link rel="stylesheet" href="./AngularMaterial/angular-material.min.css">
+    <link rel="stylesheet" href="./AngularMaterial/icon.css">    
+    <script src="./AngularMaterial/angular.min.js"></script>
+    <script src="./AngularMaterial/angular-animate.min.js"></script>
+    <script src="./AngularMaterial/angular-aria.min.js"></script>    
+    <script src="./AngularMaterial/angular-messages.min.js"></script>    
+    <script src="./AngularMaterial/angular-material.min.js"></script>
+    <script src="../base64-utf8.module.js"></script>
+</head>
+
+<body ng-app="BlankApp" ng-controller="AppCtrl" ng-cloak>
+
+    <div layout="column" layout-fill>
+        <div layout="column" layout-align="start stretch" style="padding-bottom: 20px">
+            <h2 class="md-title">Main progress</h2>
+            <md-progress-linear md-mode="determinate" value="{{progressMain}}"></md-progress-linear>
+            <h2 class="md-title">Current simulation progress</h2>
+            <md-progress-linear md-mode="determinate" value="{{progressSimulation}}"></md-progress-linear>
+        </div>        
+        <md-content flex style="border: 1px solid black;">
+            <div ng-repeat="x in resultText">{{x}}</div>                
+        </md-content>       
+        <div layout="row">
+            <div layout="row" flex ="50" layout-align="start center">
+                <md-button class="md-raised" ng-click="SaveResults();">Save Results</md-button>
+            </div>
+            <div layout="row" flex ="50" layout-align="end center">                
+                <md-button class="md-raised" ng-click="Cancel();">Cancel</md-button>
+                <md-button class="md-raised" ng-click="Start();">Start</md-button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your application bootstrap  -->
+
+    <script type="text/javascript">
+        var am = angular.module('BlankApp', ['ngMaterial', 'ngMessages']);
+        am.controller('AppCtrl', function ($scope, $http) {            
+            reset = function () {
+                $scope.resultText = [];
+                $scope.progressMain = 0;
+                $scope.progressSimulation = 0;
+            };
+            simProgress = function (resultText, progressValue) {                
+                $scope.resultText.push(resultText);
+                $scope.progressSimulation += progressValue;
+                $scope.$apply();
+            };
+            mainProgress = function (resultText, progressValue) {
+                $scope.resultText.push(resultText);
+                $scope.progressMain += progressValue;
+                $scope.progressSimulation = 0;
+                $scope.$apply();
+            };
+            $scope.Start = function ()
+            {
+                reset();                
+                simulationBinder.onStartClicked();
+            }
+            $scope.Cancel = function () { simulationBinder.onCancelClicked(); }
+            $scope.SaveResults = function () { simulationBinder.onSaveClicked(); }
+            reset();
+        });
+        window.onload = function () { pageLoadBinder.onPageLoaded(); }
+    </script>
+</body>
+</html>

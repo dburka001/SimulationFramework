@@ -1,0 +1,385 @@
+var c = document.createElement('category');
+c.setAttribute('name', 'Variables');
+document.getElementById('toolbox').appendChild(c);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'year');
+document.getElementsByName('Variables')[0].appendChild(e);
+
+Blockly.Blocks['year'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("Year");
+        this.setOutput(true, null);
+        this.setColour(330);
+        this.setTooltip('The current year of the simulation');
+    }
+};
+
+Blockly.CSharp['year'] = function(block) {
+    var code = 'Year';
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'variables_set');
+document.getElementsByName('Variables')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'variables_get');
+document.getElementsByName('Variables')[0].appendChild(e);
+
+var c = document.createElement('category');
+c.setAttribute('name', 'Constants');
+document.getElementById('toolbox').appendChild(c);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'MaleBirthProbability');
+document.getElementsByName('Constants')[0].appendChild(e);
+
+Blockly.Blocks['MaleBirthProbability'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("MaleBirthProbability");
+        this.setOutput(true, null);
+        this.setColour(330);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['MaleBirthProbability'] = function(block) {
+    var code = 'MaleBirthProbability';
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'RelationshipProbability');
+document.getElementsByName('Constants')[0].appendChild(e);
+
+Blockly.Blocks['RelationshipProbability'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("RelationshipProbability");
+        this.setOutput(true, null);
+        this.setColour(330);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['RelationshipProbability'] = function(block) {
+    var code = 'RelationshipProbability';
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'DivorceProbability');
+document.getElementsByName('Constants')[0].appendChild(e);
+
+Blockly.Blocks['DivorceProbability'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("DivorceProbability");
+        this.setOutput(true, null);
+        this.setColour(330);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['DivorceProbability'] = function(block) {
+    var code = 'DivorceProbability';
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'StartsOwnHouseholdP');
+document.getElementsByName('Constants')[0].appendChild(e);
+
+Blockly.Blocks['StartsOwnHouseholdP'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("StartsOwnHouseholdP");
+        this.setOutput(true, null);
+        this.setColour(330);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['StartsOwnHouseholdP'] = function(block) {
+    var code = 'StartsOwnHouseholdP';
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var c = document.createElement('category');
+c.setAttribute('name', 'Logic');
+document.getElementById('toolbox').appendChild(c);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'controls_if');
+document.getElementsByName('Logic')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'logic_compare');
+document.getElementsByName('Logic')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'logic_operation');
+document.getElementsByName('Logic')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'logic_negate');
+document.getElementsByName('Logic')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'logic_boolean');
+document.getElementsByName('Logic')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'logic_null');
+document.getElementsByName('Logic')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'logic_ternary');
+document.getElementsByName('Logic')[0].appendChild(e);
+
+var c = document.createElement('category');
+c.setAttribute('name', 'Math');
+document.getElementById('toolbox').appendChild(c);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'math_number');
+document.getElementsByName('Math')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'math_arithmetic');
+document.getElementsByName('Math')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'math_constant');
+document.getElementsByName('Math')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'math_on_list');
+document.getElementsByName('Math')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'math_modulo');
+document.getElementsByName('Math')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'math_constrain');
+document.getElementsByName('Math')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'math_random_int_bd');
+document.getElementsByName('Math')[0].appendChild(e);
+
+Blockly.Blocks['math_random_int_bd'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("random integer from ");
+        this.appendValueInput("FROM")
+            .setCheck(null);
+        this.appendDummyInput()
+            .appendField("to ");
+        this.appendValueInput("TO")
+            .setCheck(null);
+        this.setInputsInline(true);
+        this.setOutput(true, null);
+        this.setColour(230);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp.math_random_int_bd = function() {
+    var argument0 = Blockly.CSharp.valueToCode(this, 'FROM',
+        Blockly.CSharp.ORDER_COMMA) || '0.0';
+    var argument1 = Blockly.CSharp.valueToCode(this, 'TO',
+        Blockly.CSharp.ORDER_COMMA) || '0.0';
+    if (!Blockly.CSharp.definitions_['math_random_int_bd'])
+    {
+        var functionName = Blockly.CSharp.variableDB_.getDistinctName(
+            'math_random_int_bd', Blockly.Generator.NAME_TYPE);
+        Blockly.CSharp.math_random_int_bd.random_function = functionName;
+        var func = [];
+        func.push('var ' + functionName + ' new Func<int,int,int>((a, b) => {');
+        func.push('  if (a > b) {');
+        func.push('    // Swap a and b to ensure a is smaller.');
+        func.push('    var c = a;');
+        func.push('    a = b;');
+        func.push('    b = c;');
+        func.push('  }');
+        func.push('  return (int)Math.Floor(a + rng.Next(b - a));');
+        func.push('});');
+        Blockly.CSharp.definitions_['math_random_int_bd'] = func.join('\n');
+    }
+    var code = Blockly.CSharp.math_random_int_bd.random_function +
+        '(' + argument0 + ', ' + argument1 + ')';
+    return [code, Blockly.CSharp.ORDER_FUNCTION_CALL];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'math_random_float_bd');
+document.getElementsByName('Math')[0].appendChild(e);
+
+Blockly.Blocks['math_random_float_bd'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("random fraction");
+        this.setOutput(true, null);
+        this.setColour(230);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp.math_random_float_bd = function() {
+    return ['rng.NextDouble()', Blockly.CSharp.ORDER_FUNCTION_CALL];
+};
+
+var c = document.createElement('category');
+c.setAttribute('name', 'Nomenclature');
+document.getElementById('toolbox').appendChild(c);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'GENDER');
+document.getElementsByName('Nomenclature')[0].appendChild(e);
+
+Blockly.Blocks['GENDER'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("Gender")            .appendField(new Blockly.FieldDropdown([["Female","Female"], ["Male","Male"]]), "GENDER");
+        this.setOutput(true, null);
+        this.setColour(0);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['GENDER'] = function(block) {
+    var code = '(int)GENDER.' + this.getFieldValue('GENDER');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'FSTATUS');
+document.getElementsByName('Nomenclature')[0].appendChild(e);
+
+Blockly.Blocks['FSTATUS'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("Family status")            .appendField(new Blockly.FieldDropdown([["Child","Child"], ["Ancestor","Ancestor"], ["Other relative","OtherRelative"], ["Non relative","NonRelative"], ["Single","Single"], ["Husband, Wife","HusbandWife"], ["Life companion","LifeCompanion"], ["Father, Mother","FatherMother"]]), "FSTATUS");
+        this.setOutput(true, null);
+        this.setColour(0);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['FSTATUS'] = function(block) {
+    var code = '(int)FSTATUS.' + this.getFieldValue('FSTATUS');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'RSTATUS');
+document.getElementsByName('Nomenclature')[0].appendChild(e);
+
+Blockly.Blocks['RSTATUS'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("Relationship status")            .appendField(new Blockly.FieldDropdown([["Single","Single"], ["Married, living together","MarriedLivingTogether"], ["Married, not living together","MarriedNotLivingTogether"], ["Widowed","Widowed"], ["Divorced","Divorced"]]), "RSTATUS");
+        this.setOutput(true, null);
+        this.setColour(0);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['RSTATUS'] = function(block) {
+    var code = '(int)RSTATUS.' + this.getFieldValue('RSTATUS');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'County');
+document.getElementsByName('Nomenclature')[0].appendChild(e);
+
+Blockly.Blocks['County'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("County")            .appendField(new Blockly.FieldDropdown([["Veszprém","Veszprém"], ["Zala","Zala"], ["Hajdú-Bihar","HajdúBihar"], ["Gyõr-Moson","GyõrMoson"], ["Fejér","Fejér"], ["Csongrád","Csongrád"], ["Borsod-Abauj","BorsodAbauj"], ["Békés","Békés"], ["Bács-Kiskun","BácsKiskun"], ["Baranya","Baranya"], ["Budapest","Budapest"], ["Vas","Vas"], ["Tolna","Tolna"], ["Jász-Nagykun","JászNagykun"], ["Szabolcs","Szabolcs"], ["Somogy","Somogy"], ["Pest","Pest"], ["Nógrád","Nógrád"], ["Komárom","Komárom"], ["Heves","Heves"]]), "County");
+        this.setOutput(true, null);
+        this.setColour(0);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['County'] = function(block) {
+    var code = '(int)County.' + this.getFieldValue('County');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var c = document.createElement('category');
+c.setAttribute('name', 'Mother');
+document.getElementById('toolbox').appendChild(c);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'Mother_properties_get');
+document.getElementsByName('Mother')[0].appendChild(e);
+
+Blockly.Blocks['Mother_properties_get'] = {init: function() {
+        this.appendDummyInput()
+            .appendField("Mother")
+            .appendField(new Blockly.FieldDropdown([["IsAlive", "IsAlive"], ["BirthYear","BirthYear"], ["Age","Age"], ["Gender","Gender"], ["AgeGroup","AgeGroup"], ["FamilyStatus","FamilyStatus"], ["RelationshipStatus","RelationshipStatus"], ["County","County"], ["Household.MemberCount", "Household.MemberCount"]]), "Mother_properties_get");
+        this.setOutput(true, null);
+        this.setInputsInline(true);
+        this.setColour(120);
+        this.setTooltip('');
+    }
+};
+Blockly.CSharp['Mother_properties_get'] = function(block) {
+    var code = 'm.' + this.getFieldValue('Mother_properties_get');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var c = document.createElement('category');
+c.setAttribute('name', 'NewBorn');
+document.getElementById('toolbox').appendChild(c);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'NewBorn_properties_get');
+document.getElementsByName('NewBorn')[0].appendChild(e);
+
+Blockly.Blocks['NewBorn_properties_get'] = {init: function() {
+        this.appendDummyInput()
+            .appendField("NewBorn")
+            .appendField(new Blockly.FieldDropdown([["IsAlive", "IsAlive"], ["BirthYear","BirthYear"], ["Age","Age"], ["Gender","Gender"], ["AgeGroup","AgeGroup"], ["FamilyStatus","FamilyStatus"], ["RelationshipStatus","RelationshipStatus"], ["County","County"], ["Household.MemberCount", "Household.MemberCount"]]), "NewBorn_properties_get");
+        this.setOutput(true, null);
+        this.setInputsInline(true);
+        this.setColour(120);
+        this.setTooltip('');
+    }
+};
+Blockly.CSharp['NewBorn_properties_get'] = function(block) {
+    var code = 'n.' + this.getFieldValue('NewBorn_properties_get');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'NewBorn_properties_set');
+document.getElementsByName('NewBorn')[0].appendChild(e);
+
+Blockly.Blocks['NewBorn_properties_set'] = {init: function() {
+        this.appendDummyInput()
+            .appendField("set NewBorn")
+            .appendField(new Blockly.FieldDropdown([["IsAlive", "IsAlive"], ["BirthYear","BirthYear"], ["Age","Age"], ["Gender","Gender"], ["AgeGroup","AgeGroup"], ["FamilyStatus","FamilyStatus"], ["RelationshipStatus","RelationshipStatus"], ["County","County"]]), "NewBorn_properties_set")            .appendField(" to ");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.appendValueInput("input")
+            .setCheck(null);
+        this.setInputsInline(true);
+        this.setColour(120);
+        this.setTooltip('');
+    }
+};
+Blockly.CSharp['NewBorn_properties_set'] = function(block) {
+    var code = 'n.' + this.getFieldValue('NewBorn_properties_set') + ' = ' + (Blockly.CSharp.valueToCode(this, 'input') || 0.0) + ';\n';
+    return code;
+};
+

@@ -1,0 +1,537 @@
+var c = document.createElement('category');
+c.setAttribute('name', 'Variables');
+document.getElementById('toolbox').appendChild(c);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'year');
+document.getElementsByName('Variables')[0].appendChild(e);
+
+Blockly.Blocks['year'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("Year");
+        this.setOutput(true, null);
+        this.setColour(330);
+        this.setTooltip('The current year of the simulation');
+    }
+};
+
+Blockly.CSharp['year'] = function(block) {
+    var code = 'Year';
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'variables_set');
+document.getElementsByName('Variables')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'variables_get');
+document.getElementsByName('Variables')[0].appendChild(e);
+
+var c = document.createElement('category');
+c.setAttribute('name', 'Constants');
+document.getElementById('toolbox').appendChild(c);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'MaleBirthProbability');
+document.getElementsByName('Constants')[0].appendChild(e);
+
+Blockly.Blocks['MaleBirthProbability'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("MaleBirthProbability");
+        this.setOutput(true, null);
+        this.setColour(330);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['MaleBirthProbability'] = function(block) {
+    var code = 'MaleBirthProbability';
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var c = document.createElement('category');
+c.setAttribute('name', 'Logic');
+document.getElementById('toolbox').appendChild(c);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'controls_if');
+document.getElementsByName('Logic')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'logic_compare');
+document.getElementsByName('Logic')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'logic_operation');
+document.getElementsByName('Logic')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'logic_negate');
+document.getElementsByName('Logic')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'logic_boolean');
+document.getElementsByName('Logic')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'logic_null');
+document.getElementsByName('Logic')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'logic_ternary');
+document.getElementsByName('Logic')[0].appendChild(e);
+
+var c = document.createElement('category');
+c.setAttribute('name', 'Math');
+document.getElementById('toolbox').appendChild(c);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'math_number');
+document.getElementsByName('Math')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'math_arithmetic');
+document.getElementsByName('Math')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'math_constant');
+document.getElementsByName('Math')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'math_on_list');
+document.getElementsByName('Math')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'math_modulo');
+document.getElementsByName('Math')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'math_constrain');
+document.getElementsByName('Math')[0].appendChild(e);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'math_random_int_bd');
+document.getElementsByName('Math')[0].appendChild(e);
+
+Blockly.Blocks['math_random_int_bd'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("random integer from ");
+        this.appendValueInput("FROM")
+            .setCheck(null);
+        this.appendDummyInput()
+            .appendField("to ");
+        this.appendValueInput("TO")
+            .setCheck(null);
+        this.setInputsInline(true);
+        this.setOutput(true, null);
+        this.setColour(230);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp.math_random_int_bd = function() {
+    var argument0 = Blockly.CSharp.valueToCode(this, 'FROM',
+        Blockly.CSharp.ORDER_COMMA) || '0.0';
+    var argument1 = Blockly.CSharp.valueToCode(this, 'TO',
+        Blockly.CSharp.ORDER_COMMA) || '0.0';
+    if (!Blockly.CSharp.definitions_['math_random_int_bd'])
+    {
+        var functionName = Blockly.CSharp.variableDB_.getDistinctName(
+            'math_random_int_bd', Blockly.Generator.NAME_TYPE);
+        Blockly.CSharp.math_random_int_bd.random_function = functionName;
+        var func = [];
+        func.push('var ' + functionName + ' new Func<int,int,int>((a, b) => {');
+        func.push('  if (a > b) {');
+        func.push('    // Swap a and b to ensure a is smaller.');
+        func.push('    var c = a;');
+        func.push('    a = b;');
+        func.push('    b = c;');
+        func.push('  }');
+        func.push('  return (int)Math.Floor(a + rng.Next(b - a));');
+        func.push('});');
+        Blockly.CSharp.definitions_['math_random_int_bd'] = func.join('\n');
+    }
+    var code = Blockly.CSharp.math_random_int_bd.random_function +
+        '(' + argument0 + ', ' + argument1 + ')';
+    return [code, Blockly.CSharp.ORDER_FUNCTION_CALL];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'math_random_float_bd');
+document.getElementsByName('Math')[0].appendChild(e);
+
+Blockly.Blocks['math_random_float_bd'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("random fraction");
+        this.setOutput(true, null);
+        this.setColour(230);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp.math_random_float_bd = function() {
+    return ['rng.NextDouble()', Blockly.CSharp.ORDER_FUNCTION_CALL];
+};
+
+var c = document.createElement('category');
+c.setAttribute('name', 'Nomenclature');
+document.getElementById('toolbox').appendChild(c);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'NEME');
+document.getElementsByName('Nomenclature')[0].appendChild(e);
+
+Blockly.Blocks['NEME'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("Neme")            .appendField(new Blockly.FieldDropdown([["Nõ","Nõ"], ["Férfi","Férfi"]]), "NEME");
+        this.setOutput(true, null);
+        this.setColour(0);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['NEME'] = function(block) {
+    var code = '(int)NEME.' + this.getFieldValue('NEME');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'ÉlõVagyHolt');
+document.getElementsByName('Nomenclature')[0].appendChild(e);
+
+Blockly.Blocks['ÉlõVagyHolt'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("ÉlõVagyHolt")            .appendField(new Blockly.FieldDropdown([["Élõ","Élõ"], ["Holt","Holt"]]), "ÉlõVagyHolt");
+        this.setOutput(true, null);
+        this.setColour(0);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['ÉlõVagyHolt'] = function(block) {
+    var code = '(int)ÉlõVagyHolt.' + this.getFieldValue('ÉlõVagyHolt');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'SCSAL');
+document.getElementsByName('Nomenclature')[0].appendChild(e);
+
+Blockly.Blocks['SCSAL'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("SCSAL")            .appendField(new Blockly.FieldDropdown([["egy szülõ gyermekkel","EgySzülõGyermekkel"], ["gyermek","Gyermek"], ["felmenõ rokon","FelmenõRokon"], ["egyéb rokon","EgyébRokon"], ["nem rokon","NemRokon"], ["egyedülálló","Egyedülálló"], ["férj","Férj"], ["feleség","Feleség"], ["élettárs","Élettárs"]]), "SCSAL");
+        this.setOutput(true, null);
+        this.setColour(0);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['SCSAL'] = function(block) {
+    var code = '(int)SCSAL.' + this.getFieldValue('SCSAL');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'CSLAS');
+document.getElementsByName('Nomenclature')[0].appendChild(e);
+
+Blockly.Blocks['CSLAS'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("Családi állás (CSLAS)")            .appendField(new Blockly.FieldDropdown([["Elvált","Elvált"], ["Özvegy","Özvegy"], ["Házas","Házas"], ["Hajadon/nõtlen","HajadonNõtlen"]]), "CSLAS");
+        this.setOutput(true, null);
+        this.setColour(0);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['CSLAS'] = function(block) {
+    var code = '(int)CSLAS.' + this.getFieldValue('CSLAS');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'STANUL2');
+document.getElementsByName('Nomenclature')[0].appendChild(e);
+
+Blockly.Blocks['STANUL2'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("STANUL2")            .appendField(new Blockly.FieldDropdown([["nappali","Nappali"], ["esti","Esti"], ["levelezõ","Levelezõ"], ["távoktatás","Távoktatás"], ["egyéb","Egyéb"]]), "STANUL2");
+        this.setOutput(true, null);
+        this.setColour(0);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['STANUL2'] = function(block) {
+    var code = '(int)STANUL2.' + this.getFieldValue('STANUL2');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'Eldöntedõ');
+document.getElementsByName('Nomenclature')[0].appendChild(e);
+
+Blockly.Blocks['Eldöntedõ'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("Eldöntedõ")            .appendField(new Blockly.FieldDropdown([["igen","Igen"], ["nem","Nem"]]), "Eldöntedõ");
+        this.setOutput(true, null);
+        this.setColour(0);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['Eldöntedõ'] = function(block) {
+    var code = '(int)Eldöntedõ.' + this.getFieldValue('Eldöntedõ');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'Képzési Forma');
+document.getElementsByName('Nomenclature')[0].appendChild(e);
+
+Blockly.Blocks['Képzési Forma'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("Képzési Forma")            .appendField(new Blockly.FieldDropdown([["szakiskola 9-10. évfolyama","Szakiskola910Évfolyama"], ["ált. iskola 1-4. évfolyama","ÁltIskola14Évfolyama"], ["ált. iskola vagy gimnázium 5-8. évfolyama","ÁltIskolaVagyGimnázium58Évfolyama"], ["fõiskola","Fõiskola"], ["középiskola 9-12. évfolyama","Középiskola912Évfolyama"], ["szakiskola 11-12(-13). évfolyama","Szakiskola111213Évfolyama"], ["középiskola 13-14. évfolyama","Középiskola1314Évfolyama"], ["akkreditált felsõfokú szakképzés","AkkreditáltFelsõfokúSzakképzés"], ["egyetem","Egyetem"], ["doktori, illetve mesterképzés","DoktoriIlletveMesterképzés"], ["Iskolarendszeren kívüli képzés","IskolarendszerenKívüliKépzés"]]), "Képzési Forma");
+        this.setOutput(true, null);
+        this.setColour(0);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['Képzési Forma'] = function(block) {
+    var code = '(int)Képzési Forma.' + this.getFieldValue('Képzési Forma');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'REGIO');
+document.getElementsByName('Nomenclature')[0].appendChild(e);
+
+Blockly.Blocks['REGIO'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("REGIO")            .appendField(new Blockly.FieldDropdown([["Közép-Dunántúl","KözépDunántúl"], ["Nyugat-Dunántúl","NyugatDunántúl"], ["Dél-Dunántúl","DélDunántúl"], ["Észak-Magyarország","ÉszakMagyarország"], ["Észak-Alföld","ÉszakAlföld"], ["Budapest","Budapest"], ["Pest megye","PestMegye"], ["Dél-Alföld","DélAlföld"]]), "REGIO");
+        this.setOutput(true, null);
+        this.setColour(0);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['REGIO'] = function(block) {
+    var code = '(int)REGIO.' + this.getFieldValue('REGIO');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'SGAKT2');
+document.getElementsByName('Nomenclature')[0].appendChild(e);
+
+Blockly.Blocks['SGAKT2'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("SGAKT2")            .appendField(new Blockly.FieldDropdown([["Alkalmazásban álló szövetkezetnél","AlkalmazásbanÁllóSzövetkezetnél"], ["Alkalmazásban álló költségvetési intézménynél","AlkalmazásbanÁllóKöltségvetésiIntézménynél"], ["Alkalmazásban álló vállalkozásnál","AlkalmazásbanÁllóVállalkozásnál"], ["Alkalmazásban álló alkalmi munkás, napszámos","AlkalmazásbanÁllóAlkalmiMunkásNapszámos"], ["Alkalmazásban álló szövetkezeti tag","AlkalmazásbanÁllóSzövetkezetiTag"], ["Társas vállalkozás tagja","TársasVállalkozásTagja"], ["Egyéni vállalkozó alkalmazott nélkül","EgyéniVállalkozóAlkalmazottNélkül"], ["Egyéni vállalkozó alkalmazottal","EgyéniVállalkozóAlkalmazottal"], ["Segítõ családtag","SegítõCsaládtag"], ["Nincs","Nincs"]]), "SGAKT2");
+        this.setOutput(true, null);
+        this.setColour(0);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['SGAKT2'] = function(block) {
+    var code = '(int)SGAKT2.' + this.getFieldValue('SGAKT2');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'SCSAP');
+document.getElementsByName('Nomenclature')[0].appendChild(e);
+
+Blockly.Blocks['SCSAP'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("SCSAP")            .appendField(new Blockly.FieldDropdown([["Nõtlen/Hajadon","NõtlenHajadon"], ["Házas házastársával együtt él","HázasHázastársávalEgyüttÉl"], ["Házas házstársával nem él együtt","HázasHázstársávalNemÉlEgyütt"], ["Özvegy","Özvegy"], ["Elvált","Elvált"]]), "SCSAP");
+        this.setOutput(true, null);
+        this.setColour(0);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['SCSAP'] = function(block) {
+    var code = '(int)SCSAP.' + this.getFieldValue('SCSAP');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'HFAKT');
+document.getElementsByName('Nomenclature')[0].appendChild(e);
+
+Blockly.Blocks['HFAKT'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("HFAKT")            .appendField(new Blockly.FieldDropdown([["egyéb inaktív","EgyébInaktív"], ["munkanélküli","Munkanélküli"], ["foglalkoztatott","Foglalkoztatott"], ["nyugdíjas","Nyugdíjas"]]), "HFAKT");
+        this.setOutput(true, null);
+        this.setColour(0);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['HFAKT'] = function(block) {
+    var code = '(int)HFAKT.' + this.getFieldValue('HFAKT');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'ESTATUS');
+document.getElementsByName('Nomenclature')[0].appendChild(e);
+
+Blockly.Blocks['ESTATUS'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("ESTATUS")            .appendField(new Blockly.FieldDropdown([["egyéb","Egyéb"], ["vállalkozó","Vállalkozó"], ["nyugdíjas","Nyugdíjas"], ["munkavállaló","Munkavállaló"]]), "ESTATUS");
+        this.setOutput(true, null);
+        this.setColour(0);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['ESTATUS'] = function(block) {
+    var code = '(int)ESTATUS.' + this.getFieldValue('ESTATUS');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'SGAKT1');
+document.getElementsByName('Nomenclature')[0].appendChild(e);
+
+Blockly.Blocks['SGAKT1'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("SGAKT1")            .appendField(new Blockly.FieldDropdown([["Egyéb eltartott(nem kíván dolgozni stb.)","EgyébEltartottNemKívánDolgozniStb"], ["Alkalmazásban álló költségvetési intézménynél","AlkalmazásbanÁllóKöltségvetésiIntézménynél"], ["Alkalmazásban álló vállalkozásnál","AlkalmazásbanÁllóVállalkozásnál"], ["Alkalmazásban álló szövetkezetnél","AlkalmazásbanÁllóSzövetkezetnél"], ["Alkalmazásban álló alkalmi munkás, napszámos","AlkalmazásbanÁllóAlkalmiMunkásNapszámos"], ["Alkalmazásban álló szövetkezeti tag","AlkalmazásbanÁllóSzövetkezetiTag"], ["Társas vállalkozás tagja","TársasVállalkozásTagja"], ["Egyéni vállalkozó alkalmazott nélkül","EgyéniVállalkozóAlkalmazottNélkül"], ["Egyéni vállalkozó alkalmazottal","EgyéniVállalkozóAlkalmazottal"], ["Segítõ családtag","SegítõCsaládtag"], ["Szülési szabadságon van","SzülésiSzabadságonVan"], ["Gyeden van","GyedenVan"], ["Gyesen van és nem dolgozik mellette","GyesenVanÉsNemDolgozikMellette"], ["Gyeten van és nem dolgozik mellette","GyetenVanÉsNemDolgozikMellette"], ["Gyes mellett dolgozik","GyesMellettDolgozik"], ["Gyet mellett dolgozik","GyetMellettDolgozik"], ["Munkanélküli, ellátás nélkül","MunkanélküliEllátásNélkül"], ["Munkanélküli, járadékot kap","MunkanélküliJáradékotKap"], ["Munkanélküli, szociális segélyezett","MunkanélküliSzociálisSegélyezett"], ["Munkanélküli, álláskeresési támogatásban részesülõ","MunkanélküliÁlláskeresésiTámogatásbanRészesülõ"], ["Nyugdíjas, saját jogú öregségi","NyugdíjasSajátJogúÖregségi"], ["Nyugdíjas, saját jogú rokkantsági","NyugdíjasSajátJogúRokkantsági"], ["Nyugdíjas, özvegyi, hozzátartozói","NyugdíjasÖzvegyiHozzátartozói"], ["Nyugdíjas, amellett foglalkoztatott","NyugdíjasAmellettFoglalkoztatott"], ["Nyugdíjas, özvegyi, amellett foglalkoztatott","NyugdíjasÖzvegyiAmellettFoglalkoztatott"], ["Egyéb rendszeres szociális segélyezett","EgyébRendszeresSzociálisSegélyezett"], ["Ápolási díjban részesülõ","ÁPolásiDíjbanRészesülõ"], ["Rokkantsági járadékos","RokkantságiJáradékos"], ["Vagyonából élõ","VagyonábólÉlõ"], ["Iskolába még nem járó gyermek","IskolábaMégNemJáróGyermek"], ["Tanuló","Tanuló"], ["Háztartást vezet","HáztartástVezet"]]), "SGAKT1");
+        this.setOutput(true, null);
+        this.setColour(0);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['SGAKT1'] = function(block) {
+    var code = '(int)SGAKT1.' + this.getFieldValue('SGAKT1');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'HFSGAKT1');
+document.getElementsByName('Nomenclature')[0].appendChild(e);
+
+Blockly.Blocks['HFSGAKT1'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("HFSGAKT1")            .appendField(new Blockly.FieldDropdown([["Munkanélküli, szociális segélyezett","MunkanélküliSzociálisSegélyezett"], ["Munkanélküli, járadékot kap","MunkanélküliJáradékotKap"], ["Munkanélküli, ellátás nélkül","MunkanélküliEllátásNélkül"], ["Gyet mellett dolgozik","GyetMellettDolgozik"], ["Gyes mellett dolgozik","GyesMellettDolgozik"], ["Gyeten van és nem dolgozik mellette","GyetenVanÉsNemDolgozikMellette"], ["Gyesen van és nem dolgozik mellette","GyesenVanÉsNemDolgozikMellette"], ["Gyeden van","GyedenVan"], ["Szülési szabadságon van","SzülésiSzabadságonVan"], ["Alkalmazásban álló költségvetési intézménynél","AlkalmazásbanÁllóKöltségvetésiIntézménynél"], ["Alkalmazásban álló szövetkezeti tag","AlkalmazásbanÁllóSzövetkezetiTag"], ["Alkalmazásban álló alkalmi munkás, napszámos","AlkalmazásbanÁllóAlkalmiMunkásNapszámos"], ["Alkalmazásban álló szövetkezetnél","AlkalmazásbanÁllóSzövetkezetnél"], ["Alkalmazásban álló vállalkozásnál","AlkalmazásbanÁllóVállalkozásnál"], ["Egyéb eltartott(nem kíván dolgozni stb.)","EgyébEltartottNemKívánDolgozniStb"], ["Háztartást vezet","HáztartástVezet"], ["Rokkantsági járadékos","RokkantságiJáradékos"], ["Tanuló","Tanuló"], ["Iskolába még nem járó gyermek","IskolábaMégNemJáróGyermek"], ["Vagyonából élõ","VagyonábólÉlõ"], ["Segítõ családtag","SegítõCsaládtag"], ["Egyéni vállalkozó alkalmazottal","EgyéniVállalkozóAlkalmazottal"], ["Egyéni vállalkozó alkalmazott nélkül","EgyéniVállalkozóAlkalmazottNélkül"], ["Társas vállalkozás tagja","TársasVállalkozásTagja"], ["Ápolási díjban részesülõ","ÁPolásiDíjbanRészesülõ"], ["Egyéb rendszeres szociális segélyezett","EgyébRendszeresSzociálisSegélyezett"], ["Nyugdíjas, özvegyi, amellett foglalkoztatott","NyugdíjasÖzvegyiAmellettFoglalkoztatott"], ["Nyugdíjas, amellett foglalkoztatott","NyugdíjasAmellettFoglalkoztatott"], ["Nyugdíjas, özvegyi, hozzátartozói","NyugdíjasÖzvegyiHozzátartozói"], ["Nyugdíjas, saját jogú rokkantsági","NyugdíjasSajátJogúRokkantsági"], ["Nyugdíjas, saját jogú öregségi","NyugdíjasSajátJogúÖregségi"], ["Munkanélküli, álláskeresési támogatásban részesülõ","MunkanélküliÁlláskeresésiTámogatásbanRészesülõ"]]), "HFSGAKT1");
+        this.setOutput(true, null);
+        this.setColour(0);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['HFSGAKT1'] = function(block) {
+    var code = '(int)HFSGAKT1.' + this.getFieldValue('HFSGAKT1');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'MEGYEKOD');
+document.getElementsByName('Nomenclature')[0].appendChild(e);
+
+Blockly.Blocks['MEGYEKOD'] = {
+init: function() {
+        this.appendDummyInput()
+            .appendField("MEGYEKOD")            .appendField(new Blockly.FieldDropdown([["Veszprém","Veszprém"], ["Zala","Zala"], ["Hajdú-Bihar","HajdúBihar"], ["Gyõr-Moson","GyõrMoson"], ["Fejér","Fejér"], ["Csongrád","Csongrád"], ["Borsod-Abauj","BorsodAbauj"], ["Békés","Békés"], ["Bács-Kiskun","BácsKiskun"], ["Baranya","Baranya"], ["Budapest","Budapest"], ["Vas","Vas"], ["Tolna","Tolna"], ["Jász-Nagykun","JászNagykun"], ["Szabolcs","Szabolcs"], ["Somogy","Somogy"], ["Pest","Pest"], ["Nógrád","Nógrád"], ["Komárom","Komárom"], ["Heves","Heves"]]), "MEGYEKOD");
+        this.setOutput(true, null);
+        this.setColour(0);
+        this.setTooltip('');
+    }
+};
+
+Blockly.CSharp['MEGYEKOD'] = function(block) {
+    var code = '(int)MEGYEKOD.' + this.getFieldValue('MEGYEKOD');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var c = document.createElement('category');
+c.setAttribute('name', 'Mother');
+document.getElementById('toolbox').appendChild(c);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'Mother_properties_get');
+document.getElementsByName('Mother')[0].appendChild(e);
+
+Blockly.Blocks['Mother_properties_get'] = {init: function() {
+        this.appendDummyInput()
+            .appendField("Mother")
+            .appendField(new Blockly.FieldDropdown([["IsAlive", "IsAlive"], ["BirthYear","BirthYear"], ["Gender","Gender"], ["CSLAS","CSLAS"], ["Regio","Regio"]]), "Mother_properties_get");
+        this.setOutput(true, null);
+        this.setInputsInline(true);
+        this.setColour(120);
+        this.setTooltip('');
+    }
+};
+Blockly.CSharp['Mother_properties_get'] = function(block) {
+    var code = 'm.' + this.getFieldValue('Mother_properties_get');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var c = document.createElement('category');
+c.setAttribute('name', 'NewBorn');
+document.getElementById('toolbox').appendChild(c);
+
+var e = document.createElement('block');
+e.setAttribute('type', 'NewBorn_properties_get');
+document.getElementsByName('NewBorn')[0].appendChild(e);
+
+Blockly.Blocks['NewBorn_properties_get'] = {init: function() {
+        this.appendDummyInput()
+            .appendField("NewBorn")
+            .appendField(new Blockly.FieldDropdown([["IsAlive", "IsAlive"], ["BirthYear","BirthYear"], ["Gender","Gender"], ["CSLAS","CSLAS"], ["Regio","Regio"]]), "NewBorn_properties_get");
+        this.setOutput(true, null);
+        this.setInputsInline(true);
+        this.setColour(120);
+        this.setTooltip('');
+    }
+};
+Blockly.CSharp['NewBorn_properties_get'] = function(block) {
+    var code = 'n.' + this.getFieldValue('NewBorn_properties_get');
+    return [code, Blockly.CSharp.ORDER_ATOMIC];
+};
+
+var e = document.createElement('block');
+e.setAttribute('type', 'NewBorn_properties_set');
+document.getElementsByName('NewBorn')[0].appendChild(e);
+
+Blockly.Blocks['NewBorn_properties_set'] = {init: function() {
+        this.appendDummyInput()
+            .appendField("set NewBorn")
+            .appendField(new Blockly.FieldDropdown([["IsAlive", "IsAlive"], ["BirthYear","BirthYear"], ["Gender","Gender"], ["CSLAS","CSLAS"], ["Regio","Regio"]]), "NewBorn_properties_set")            .appendField(" to ");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.appendValueInput("input")
+            .setCheck(null);
+        this.setInputsInline(true);
+        this.setColour(120);
+        this.setTooltip('');
+    }
+};
+Blockly.CSharp['NewBorn_properties_set'] = function(block) {
+    var code = 'n.' + this.getFieldValue('NewBorn_properties_set') + ' = ' + (Blockly.CSharp.valueToCode(this, 'input') || 0.0) + ';\n';
+    return code;
+};
+

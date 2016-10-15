@@ -1,0 +1,14 @@
+c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\bin\x64\Debug\MicroSimulation.dll
+c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\bin\x64\Debug\MicroSimulation.pdb
+c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\bin\x64\Debug\MicroSimSettings.dll
+c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\bin\x64\Debug\CefSharp.WinForms.dll
+c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\bin\x64\Debug\CefSharp.dll
+c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\bin\x64\Debug\DocumentFormat.OpenXml.dll
+c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\bin\x64\Debug\CefSharp.Core.dll
+c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\bin\x64\Debug\MicroSimSettings.pdb
+c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\bin\x64\Debug\CefSharp.WinForms.xml
+c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\bin\x64\Debug\CefSharp.xml
+c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\bin\x64\Debug\CefSharp.Core.xml
+c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\obj\x64\Debug\MicroSimulation.csprojResolveAssemblyReference.cache
+c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\obj\x64\Debug\MicroSimulation.dll
+c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\obj\x64\Debug\MicroSimulation.pdb

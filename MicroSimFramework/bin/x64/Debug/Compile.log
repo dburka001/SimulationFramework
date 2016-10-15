@@ -1,0 +1,416 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using MicroSimSettings;
+using System.Linq;
+using Microsoft.Win32.SafeHandles;
+using System.Collections.Concurrent;
+using System.Threading.Tasks;
+
+namespace CompiledNamspaceFoo_4a88917192dd452dae71ccfd67ab1583
+{
+	public enum GENDER {
+		Female=2,
+		Male=1 }
+
+	public enum FSTATUS {
+		Child=4,
+		Ancestor=5,
+		OtherRelative=6,
+		NonRelative=7,
+		Single=8,
+		HusbandWife=1,
+		LifeCompanion=2,
+		FatherMother=3 }
+
+	public enum RSTATUS {
+		Single=1,
+		MarriedLivingTogether=2,
+		MarriedNotLivingTogether=3,
+		Widowed=4,
+		Divorced=5 }
+
+	public enum County {
+		Veszprém=19,
+		Zala=20,
+		HajdúBihar=9,
+		GyõrMoson=8,
+		Fejér=7,
+		Csongrád=6,
+		BorsodAbauj=5,
+		Békés=4,
+		BácsKiskun=3,
+		Baranya=2,
+		Budapest=1,
+		Vas=18,
+		Tolna=17,
+		JászNagykun=16,
+		Szabolcs=15,
+		Somogy=14,
+		Pest=13,
+		Nógrád=12,
+		Komárom=11,
+		Heves=10 }
+
+	public class Person
+	{
+		public Household Household { get; set; }
+		public System.Boolean IsAlive { get; set; }
+		public System.String ParentID { get; set; }
+		public System.Int32 BirthYear { get; set; }
+		public System.Int32 Age { get; set; }
+		public System.Int32 Gender { get; set; }
+		public System.Double AgeGroup { get; set; }
+		public System.Int32 FamilyStatus { get; set; }
+		public System.Int32 RelationshipStatus { get; set; }
+		public System.Int32 County { get; set; }
+
+		public Person()
+		{
+			this.IsAlive=true;
+			this.BirthYear=1900;
+			this.Age=0;
+			this.AgeGroup=0;
+		}
+
+		public void Die()
+		{
+			IsAlive = false;
+			ExtensionMethods.LeaveHousehold(this);
+		}
+
+		public Person Clone()
+		{
+			Person p = new Person();
+			p.IsAlive = this.IsAlive;
+			p.ParentID = this.ParentID;
+			p.BirthYear = this.BirthYear;
+			p.Age = this.Age;
+			p.Gender = this.Gender;
+			p.AgeGroup = this.AgeGroup;
+			p.FamilyStatus = this.FamilyStatus;
+			p.RelationshipStatus = this.RelationshipStatus;
+			p.County = this.County;
+			return p;
+		}
+	}
+
+	public class Household
+	{
+		public List<Person> Members { get; set; }
+		public int MemberCount { get { return Members.Where( p => p.FamilyStatus == 4 ).Count(); } }
+		public System.Boolean IsEmpty { get; set; }
+		public System.String ParentID { get; set; }
+
+		public Household()
+		{
+			this.Members = new List<Person>();
+			this.IsEmpty=false;
+		}
+
+		public Household Clone()
+		{
+			Household h = new Household();
+			h.IsEmpty = this.IsEmpty;
+			h.ParentID = this.ParentID;
+			return h;
+		}
+	}
+
+	public static class ExtensionMethods
+	{
+
+		public static double[] BirthRates_array = {
+			0, 0.019848808, 0.049649517, 0.087616882, 0.07376105, 0.027695369, 0.004709915, 0.000165417, 0}
+			;
+
+
+		public static double BirthRates(int ageGroup)
+		{
+			int v0=ageGroup-0;
+
+			return BirthRates_array[v0];
+		}
+
+
+		public static double[] BirthAgeGroups_array = {
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8}
+			;
+
+
+		public static double BirthAgeGroups(int age)
+		{
+			int v0=age-0;
+
+			return BirthAgeGroups_array[v0];
+		}
+
+
+		public static double[] AgeGroups_array = {
+			0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 13, 13, 13, 13, 13, 14, 14, 14, 14, 14, 15, 15, 15, 15, 15, 16, 16, 16, 16, 16, 17, 17, 17, 17, 17, 18, 18, 18, 18, 18, 19, 19, 19, 19, 19, 20, 20, 20, 20, 20, 21, 21, 21, 21, 21, 21}
+			;
+
+
+		public static double AgeGroups(int age)
+		{
+			int v0=age-0;
+
+			return AgeGroups_array[v0];
+		}
+
+
+		public static double[,] MortalityRates_array = {
+			{0.007204, 0.00066, 0.00041, 0.00026, 0.00016, 0.00012, 0.00023, 0.00014, 0.00027, 0.00016, 0.0001, 0.0001, 8E-05, 0.00014, 0.00027, 0.00025, 0.00038, 0.00058, 0.00052, 0.00085, 0.00078, 0.00082, 0.00075, 0.00075, 0.00093, 0.00095, 0.00095, 0.001129, 0.001159, 0.001189, 0.001229, 0.001199, 0.001259, 0.001579, 0.001559, 0.001928, 0.002477, 0.002716, 0.002926, 0.003643, 0.004112, 0.003942, 0.005405, 0.007105, 0.007124, 0.00888, 0.00994, 0.010772, 0.011553, 0.011829, 0.013843, 0.01406, 0.01538, 0.017161, 0.016984, 0.018693, 0.019007, 0.021251, 0.022327, 0.022366, 0.024593, 0.027505, 0.028059, 0.029166, 0.031745, 0.035003, 0.0348, 0.039489, 0.040123, 0.043916, 0.047657, 0.051942, 0.055293, 0.056907, 0.061028, 0.065926, 0.074851, 0.083341, 0.086215, 0.095533, 0.102597, 0.112343, 0.116973, 0.13138, 0.138388, 0.154435, 0.128143, 0.154173, 0.18104, 0.180622, 0.221152, 0.227258, 0.25485, 0.260714, 0.265636, 0.286519, 0.302149, 0.31786, 0.333563, 0.349192, 0.364657, 0.379891, 0.394826, 0.409396, 0.42354, 0.437211, 0.450365, 0.462969, 0.475002, 0.486441, 0.497279},
+			{0.005455, 0.00033, 0.00043, 0.00011, 0.00021, 6E-05, 0.00022, 0.00015, 0.00016, 0.0001, 9E-05, 0.00013, 5E-05, 0.00013, 0.00016, 0.00021, 0.00025, 0.00021, 0.00038, 0.00031, 0.00029, 0.00023, 0.00029, 0.00029, 0.00025, 0.00035, 0.00031, 0.00028, 0.00041, 0.00061, 0.0005, 0.00041, 0.00061, 0.00058, 0.00068, 0.00088, 0.00098, 0.001049, 0.001479, 0.001619, 0.001709, 0.001928, 0.002188, 0.002846, 0.002706, 0.002986, 0.003594, 0.003773, 0.004579, 0.00439, 0.005196, 0.005654, 0.005714, 0.006598, 0.00637, 0.007244, 0.007839, 0.007918, 0.008117, 0.008543, 0.009524, 0.010237, 0.010346, 0.011484, 0.013281, 0.013508, 0.016591, 0.017593, 0.018654, 0.020703, 0.023421, 0.026405, 0.028001, 0.031319, 0.036083, 0.038509, 0.045941, 0.049037, 0.056746, 0.063513, 0.069227, 0.080274, 0.086498, 0.099621, 0.106054, 0.1259, 0.112609, 0.135376, 0.156479, 0.156757, 0.196823, 0.205292, 0.23461, 0.238869, 0.264349, 0.278873, 0.2983, 0.31788, 0.337457, 0.356877, 0.375991, 0.394669, 0.412777, 0.430206, 0.446869, 0.46269, 0.47762, 0.491622, 0.504684, 0.516807, 0.528006}
+			};
+
+
+		public static double MortalityRates(GENDER gENDER,int age)
+		{
+			int v0=(int)gENDER-1;
+			int v1=age-0;
+
+			return MortalityRates_array[v0,v1];
+		}
+
+
+
+		private static double MaleBirthProbability = 0.514;
+		private static double RelationshipProbability = 0.04;
+		private static double DivorceProbability = 0.005;
+		private static double StartsOwnHouseholdP = 0.5;
+
+		public static SimStepOutput SimStep(int currentID, object currentPerson, int Year, int randomSeed)
+		{
+			Random rng = new Random(randomSeed);
+			ModelSettings settings = ModelSettings.Instance;
+			Person p = (Person)currentPerson;
+			SimStepOutput output = new SimStepOutput();
+			List<object> NewBorns = new List<object>();
+			output.NewBorns = NewBorns;
+
+			if(!p.IsAlive) return output;
+
+			p.Age = Year - p.BirthYear;
+			if (p.Age >= 110) {
+			  p.Die();
+
+			  return output;
+
+			}
+			if (rng.NextDouble() <= ExtensionMethods.MortalityRates((GENDER)p.Gender, (int)p.Age)) {
+			  p.Die();
+
+			  return output;
+
+			}
+			p.AgeGroup = ExtensionMethods.AgeGroups((int)p.Age);
+			if (p.Gender == (int)GENDER.Female) {
+			  if (rng.NextDouble() <= ExtensionMethods.BirthRates((int)ExtensionMethods.BirthAgeGroups((int)p.Age))) {
+			    if (p.FamilyStatus == (int)FSTATUS.Single) {
+			      p.FamilyStatus = (int)FSTATUS.FatherMother;
+			    }
+			    Person n = new Person();
+
+			    Person m = p;
+
+			    n.Household = p.Household;
+
+			    n.Household.Members.Add(n);
+
+			    n.ParentID = currentID.ToString() + NewBorns.Count.ToString();
+
+			    n.BirthYear = Year;
+			    n.Age = 0;
+			    n.AgeGroup = 0;
+			    if (rng.NextDouble() <= MaleBirthProbability) {
+			      n.Gender = (int)GENDER.Male;
+			    } else {
+			      n.Gender = (int)GENDER.Female;
+			    }
+			    
+			    n.FamilyStatus = (int)FSTATUS.Child;
+			    n.RelationshipStatus = (int)RSTATUS.Single;
+			    n.County = m.County;
+			    
+			    NewBorns.Add(n);
+
+			  }
+			  if (p.RelationshipStatus != (int)RSTATUS.MarriedLivingTogether && p.RelationshipStatus != (int)RSTATUS.MarriedNotLivingTogether) {
+			    if (rng.NextDouble() <= RelationshipProbability) {
+			      output.NewRelationship = new Relationship(currentID, p, "Marriage");
+			    }
+			  }
+			}
+			if (p.RelationshipStatus == (int)RSTATUS.MarriedLivingTogether || p.RelationshipStatus == (int)RSTATUS.MarriedNotLivingTogether) {
+			  if (rng.NextDouble() <= DivorceProbability) {
+			    output.NewHousehold = new Household();
+
+			    ((Household)output.NewHousehold).ParentID = currentID.ToString();
+
+			    ExtensionMethods.JoinNewHousehold(p, output.NewHousehold, "Single");
+
+			  }
+			}
+			if (p.FamilyStatus == (int)FSTATUS.Child && p.Age >= 18) {
+			  if (rng.NextDouble() <= StartsOwnHouseholdP) {
+			    output.NewHousehold = new Household();
+
+			    ((Household)output.NewHousehold).ParentID = currentID.ToString();
+
+			    ExtensionMethods.JoinNewHousehold(p, output.NewHousehold, "Single");
+
+			  }
+			}
+			
+			return output;
+		}
+
+		public static void LeaveHousehold(object person)
+		{
+			Person p = (Person)person;
+			Household oldHousehold = p.Household;
+			lock(oldHousehold.Members) {
+				oldHousehold.Members.Remove(p);
+				p.Household = null;
+				if(oldHousehold.Members.Count == 0) oldHousehold.IsEmpty = true;
+			}
+		}
+
+		public static void JoinHousehold(object person, object newHousehold)
+		{
+			Person p = (Person)person;
+			ExtensionMethods.LeaveHousehold(p);
+			p.Household = (Household)newHousehold;
+			((Household)newHousehold).Members.Add(p);
+		}
+
+		public static void JoinNewHousehold(object person, object newHousehold, string joinType)
+		{
+			Person p = (Person)person;
+			Household oldHousehold = p.Household;
+			Household n = (Household)newHousehold;
+
+			if(joinType == "Single")
+			{
+			  if (p.FamilyStatus == (int)FSTATUS.Child) {
+			    p.FamilyStatus = (int)FSTATUS.Single;
+			  }
+			  if (p.RelationshipStatus == (int)RSTATUS.MarriedLivingTogether || p.RelationshipStatus == (int)RSTATUS.MarriedNotLivingTogether) {
+			    p.FamilyStatus = (int)FSTATUS.Single;
+			    p.RelationshipStatus = (int)RSTATUS.Divorced;
+			    foreach(Person member in p.Household.Members.ToList())
+			    {
+			      if (member.RelationshipStatus == (int)RSTATUS.MarriedLivingTogether || member.RelationshipStatus == (int)RSTATUS.MarriedNotLivingTogether) {
+			            lock(member) member.FamilyStatus = (int)FSTATUS.Single;
+			            lock(member) member.RelationshipStatus = (int)RSTATUS.Divorced;
+			      }
+			    }
+			  }
+			}
+			if(joinType == "Marriage")
+			{
+			  p.RelationshipStatus = (int)RSTATUS.MarriedLivingTogether;
+			  p.FamilyStatus = (int)FSTATUS.HusbandWife;
+			}
+			
+			ExtensionMethods.LeaveHousehold(p);
+			p.Household = n;
+			n.Members.Add(p);
+		}
+
+		public static void GetResults(object inputPopulation, List<object> inputHouseholds, List<Result> ResultList, int Year)
+		{
+			List<Person> Population = (List<Person>)inputPopulation;
+			List<Household> Households = inputHouseholds.Cast<Household>().ToList();
+
+			List<ResultItem> selectPop = new List<ResultItem>();
+			selectPop.Add(new ResultItem() { Year = Year, Value = Population.Where(p => p.IsAlive).Select(p => p.IsAlive).Count() });
+			Result Pop = ResultList.Find((x) => x.Name.Equals("Pop"));
+			if(Pop == null) { Pop = new Result("Pop"); ResultList.Add(Pop); }
+			Pop.AddSelectResult(selectPop);
+			List<ResultItem> selectAgeTree = Population.Where(p => p.IsAlive).GroupBy(p => new { Gender = (p.Gender), AgeGroup = (p.AgeGroup) }).Select(g => new ResultItem() { Year = Year, Key = g.Key, Value = g.Select(p => p.IsAlive).Count() }).ToList();
+			Result AgeTree = ResultList.Find((x) => x.Name.Equals("AgeTree"));
+			if(AgeTree == null) { AgeTree = new Result("AgeTree"); ResultList.Add(AgeTree); }
+			AgeTree.AddSelectResult(selectAgeTree);
+			List<ResultItem> selectHouseholdCount = new List<ResultItem>();
+			selectHouseholdCount.Add(new ResultItem() { Year = Year, Value = Households.Where(h => !h.IsEmpty && true).Select(h => h).Count() });
+			Result HouseholdCount = ResultList.Find((x) => x.Name.Equals("HouseholdCount"));
+			if(HouseholdCount == null) { HouseholdCount = new Result("HouseholdCount"); ResultList.Add(HouseholdCount); }
+			HouseholdCount.AddSelectResult(selectHouseholdCount);
+			List<ResultItem> selectHouseholdChildren = Households.Where(h => !h.IsEmpty && true).GroupBy(h => new { MemberCount = (h.MemberCount) }).Select(g => new ResultItem() { Year = Year, Key = g.Key, Value = g.Select(h => h).Count() }).ToList();
+			Result HouseholdChildren = ResultList.Find((x) => x.Name.Equals("HouseholdChildren"));
+			if(HouseholdChildren == null) { HouseholdChildren = new Result("HouseholdChildren"); ResultList.Add(HouseholdChildren); }
+			HouseholdChildren.AddSelectResult(selectHouseholdChildren);
+			
+		}
+	}
+	public static class RelationshipExtensions
+	{
+		public static void CreateNewRelationships(object inputPopulation, List<Relationship> newRelationships, ConcurrentBag<object> newHouseholds, ParallelOptions pOptions, Random GlobalRng)
+		{
+			List<int> targetIds = new List<int>();
+			List<int> targetCounts = new List<int>();
+			List<Person> Population = (List<Person>)inputPopulation;
+			foreach (RelationshipType rst in ModelSettings.Instance.RelationshipTypes)
+			{
+				string relationshipType = rst.Name;
+				var currentPeople = newRelationships.Where(x => x.Type == relationshipType).Select(x => (Person)x.Person).ToList<Person>();
+
+				if(relationshipType == "Marriage")
+				{
+					var sourceGroups = currentPeople.GroupBy(p => new { AgeGroup = p.AgeGroup, County = p.County }, (key, g) => new { Key = key, Members = g.ToList<Person>() }).ToList();
+					var targetGroups = Population.Where(p => p.IsAlive && p.Gender.ToString() != "2" && p.RelationshipStatus.ToString() != "2" && p.RelationshipStatus.ToString() != "3" && p.FamilyStatus.ToString() != "4").GroupBy(p => new { AgeGroup = p.AgeGroup, County = p.County }, (key, g) => new { Key = key, Members = g.ToList<Person>() }).ToList();
+					foreach (var sourceGroup in sourceGroups)
+					{
+						foreach (var sourcePerson in sourceGroup.Members)
+						{
+							int keyDistance = -1;
+							double keyDistanceProbability = GlobalRng.NextDouble();
+							if(keyDistanceProbability <= 0.65) keyDistance = 0;
+							else if(keyDistanceProbability <= 0.9) keyDistance = 1;
+							else if(keyDistanceProbability <= 1) keyDistance = 2;
+
+							targetIds.Clear();
+							targetCounts.Clear();
+							for (int tgId = 0; tgId < targetGroups.Count; tgId++)
+							{
+								var targetGroup = targetGroups[tgId];
+								int currentKeyDistance = 0;
+								currentKeyDistance += (int)Math.Abs(targetGroup.Key.AgeGroup - sourceGroup.Key.AgeGroup);
+								currentKeyDistance += (int)Math.Abs(targetGroup.Key.County - sourceGroup.Key.County);
+
+								if(currentKeyDistance != keyDistance) continue;
+
+								targetIds.Add(tgId);
+								targetCounts.Add(targetGroup.Members.Count());
+							}
+
+							int selectedTargetId = GlobalRng.Next(targetCounts.Sum());
+							Person targetPerson = null;
+							for (int tgId = 0; tgId < targetIds.Count(); tgId++)
+							{
+								if(targetCounts[tgId] <= selectedTargetId)
+								{
+									selectedTargetId -= targetCounts[tgId];
+								}
+								else
+								{
+									var targetGroup = targetGroups[targetIds[tgId]];
+									targetPerson = targetGroup.Members[selectedTargetId];
+									break;
+								}
+							}
+							if(targetPerson == null || targetPerson == sourcePerson) continue;
+							Household h = new Household();
+							newHouseholds.Add(h);
+							ExtensionMethods.JoinNewHousehold(sourcePerson, h, "Marriage");
+							ExtensionMethods.JoinNewHousehold(targetPerson, h, "Marriage");
+						}
+					}
+				}
+			}
+		}
+
+	}
+}

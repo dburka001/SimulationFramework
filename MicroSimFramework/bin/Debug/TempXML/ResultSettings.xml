@@ -1,0 +1,37 @@
+<xml>
+  <block type="select" id="W;EDO5|[J6BS/W[W#%Y1" x="8" y="21">
+    <mutation items="2"></mutation>
+    <field name="name">Korfa</field>
+    <field name="type">Count</field>
+    <field name="NAME0">Nem</field>
+    <field name="NAME1">Kor</field>
+    <value name="property">
+      <block type="Person_properties_get" id="9?%8^j9e`jm.!DMEK?-)">
+        <field name="Person_properties_get">IsAlive</field>
+      </block>
+    </value>
+    <value name="where">
+      <block type="Person_properties_get" id="!DLBT9GP70T0Xt-@7QKL">
+        <field name="Person_properties_get">IsAlive</field>
+      </block>
+    </value>
+    <value name="ADD0">
+      <block type="Person_properties_get" id="Bj?ESZ.0hrh8jGlpRAfl">
+        <field name="Person_properties_get">Gender</field>
+      </block>
+    </value>
+    <value name="ADD1">
+      <block type="math_arithmetic" id="s#bdObRf?4J**%1kY3NP">
+        <field name="OP">MINUS</field>
+        <value name="A">
+          <block type="year" id="{TQkD6Hhhu4XG4vL(|iM"></block>
+        </value>
+        <value name="B">
+          <block type="Person_properties_get" id="0-d[q5DD.4WBHF!Tk^cT">
+            <field name="Person_properties_get">BirthYear</field>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+</xml>
