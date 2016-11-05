@@ -111,6 +111,10 @@ namespace MicroSimCodeBuilder
             AddBlock("Math", "math_random_int_bd", createRandom(isGlobalRandom));
             AddBlock("Math", "math_random_float_bd", createRandomFraction(isGlobalRandom));
 
+            AddCategory("Comments");
+            AddBlock("Comments", "comment1", createComments(1));
+            AddBlock("Comments", "comment2", createComments(2));
+
             AddCategory("Nomenclature");
             foreach (Nómenklatúra nomenclature in ModelData.Instance.Parameters.Nómenklatúrák)
             {
@@ -390,6 +394,43 @@ namespace MicroSimCodeBuilder
             }
             code.AppendLine(")';");
             code.AppendLine("    return [code, Blockly.CSharp.ORDER_ATOMIC];");
+            code.AppendLine("};");
+
+            return code;
+        }
+
+        protected StringBuilder createComments(int type)
+        {
+            StringBuilder code = new StringBuilder();
+            string typeString = type.ToString();
+            // Block
+            code.AppendLine("Blockly.Blocks['comment" + typeString + "'] = {");
+            code.AppendLine("init: function() {");
+            code.AppendLine("        this.appendDummyInput()");
+            code.AppendLine("            .appendField(new Blockly.FieldTextInput(\"comment\"), \"TEXT\");");
+            if (type == 2)
+            {
+                code.AppendLine("        this.appendStatementInput(\"statement\")");
+                code.AppendLine("            .setCheck(null);");
+            }
+            code.AppendLine("        this.setInputsInline(true);");
+            code.AppendLine("        this.setPreviousStatement(true, null);");
+            code.AppendLine("        this.setNextStatement(true, null);");
+            code.AppendLine("        this.setColour(300);");
+            code.AppendLine("        this.setTooltip('Comment block');");
+            code.AppendLine("    }");
+            code.AppendLine("};");
+
+            // Code generator
+            code.AppendLine("Blockly.CSharp['comment" + typeString + "'] = function(block) {");
+            code.AppendLine("    var text_text = block.getFieldValue('TEXT');");            
+            code.AppendLine("    var code = '//' + text_text + '\\n';");
+            if (type == 2)
+            {
+                code.AppendLine("    var statements_statement = Blockly.CSharp.statementToCode(block, 'statement');");
+                code.AppendLine("    code += statements_statement;");
+            }
+            code.AppendLine("    return code;");
             code.AppendLine("};");
 
             return code;
