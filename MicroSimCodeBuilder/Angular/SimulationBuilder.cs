@@ -7,6 +7,7 @@ using MicroSimulation;
 using System.Threading;
 using System.Windows.Forms;
 using System.IO;
+using MicroSimSettings;
 
 namespace MicroSimCodeBuilder
 {
@@ -41,12 +42,12 @@ namespace MicroSimCodeBuilder
         private void Save()
         {
             SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Simulation Result (.sr) | *.sr";
             if (sfd.ShowDialog() == DialogResult.OK)
             {
-                StreamWriter sw = new StreamWriter(sfd.FileName, false, Encoding.Default);
-                sw.WriteLine(Sim.ResultsAsString());
-                sw.Close();
+                using (StreamWriter sw = new StreamWriter(sfd.FileName, false, Encoding.Default))                    
+                    sw.Write(Sim.ResultsAsString());                
             }
-        }
+        }        
     }
 }

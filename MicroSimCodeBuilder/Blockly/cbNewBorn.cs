@@ -28,6 +28,13 @@ namespace MicroSimCodeBuilder
             AddBlock("NewBorn", "NewBorn_properties_get", createPersonProperties("NewBorn", false));
             AddBlock("NewBorn", "NewBorn_properties_set", createPersonProperties("NewBorn", true));
 
+            AddCategory("Matrices");
+            foreach (ParameterTable table in ModelData.Instance.Parameters.ValószínűségiTáblák)
+            {
+                AddBlock("Matrices", table.Name,
+                    createArraySelector(table.Name, table.Name, table, 0, ""));
+            }
+
             saveCode("NewBorn.js.log");
         }
     }

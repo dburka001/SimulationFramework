@@ -30,8 +30,17 @@ namespace MicroSimCodeBuilder
                 AddBlock("Household", "Household_properties_get", createPersonProperties("Household", false));             
             }
 
+            AddCategory("Matrices");
+            foreach (ParameterTable table in ModelData.Instance.Parameters.ValószínűségiTáblák)
+            {
+                AddBlock("Matrices", table.Name,
+                    createArraySelector(table.Name, table.Name, table, 0, ""));
+            }
+
             AddCategory("Select");
             AddBlock("Select", "select", createSelect("select.js"));
+            AddBlock("Select", "selectList", createSelect("selectList.js"));
+            AddBlock("Select", "selectItem", createSelect("selectItem.js"));
 
             if (ModelSettings.Instance.UseHouseholds)
             {

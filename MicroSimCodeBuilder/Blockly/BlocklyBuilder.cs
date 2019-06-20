@@ -104,12 +104,22 @@ namespace MicroSimCodeBuilder
             AddBlock("Math", "math_number");
             AddBlock("Math", "math_arithmetic");
             AddBlock("Math", "math_constant");
-            AddBlock("Math", "math_on_list");
+            AddBlock("Math", "math_single");
+            AddBlock("Math", "math_round");
+            AddBlock("Math", "math_on_list");           
             AddBlock("Math", "math_modulo");
             AddBlock("Math", "math_constrain");
 
             AddBlock("Math", "math_random_int_bd", createRandom(isGlobalRandom));
             AddBlock("Math", "math_random_float_bd", createRandomFraction(isGlobalRandom));
+
+            AddCategory("Loop");
+            AddBlock("Loop", "controls_repeat");
+            AddBlock("Loop", "controls_repeat_ext");
+            AddBlock("Loop", "controls_whileUntil");
+            AddBlock("Loop", "controls_for");
+            AddBlock("Loop", "controls_forEach");
+            AddBlock("Loop", "controls_flow_statements");
 
             AddCategory("Comments");
             AddBlock("Comments", "comment1", createComments(1));

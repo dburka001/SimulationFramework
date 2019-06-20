@@ -36,6 +36,7 @@ namespace MicroSimFramework
         public MainForm()
         {
             InitializeComponent();
+            Icon = Properties.Resources.icon;
             CultureInfo.DefaultThreadCurrentCulture = CultureInfo.CreateSpecificCulture("en-US");
             Cef.Initialize(new CefSettings());
             SimBinding = new SimulationBinding();

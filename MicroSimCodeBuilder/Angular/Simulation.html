@@ -22,7 +22,7 @@
             <md-progress-linear md-mode="determinate" value="{{progressSimulation}}"></md-progress-linear>
         </div>        
         <md-content flex style="border: 1px solid black;">
-            <div ng-repeat="x in resultText">{{x}}</div>                
+            <div ng-repeat="x in resultText track by $index" on-finish-render="ngRepeatFinished">{{x}}</div>                
         </md-content>       
         <div layout="row">
             <div layout="row" flex ="50" layout-align="start center">
@@ -38,23 +38,38 @@
     <!-- Your application bootstrap  -->
 
     <script type="text/javascript">
-        var am = angular.module('BlankApp', ['ngMaterial', 'ngMessages']);
+        var am = angular.module('BlankApp', ['ngMaterial', 'ngMessages'])
+                        .directive('onFinishRender', function ($timeout) {
+                            return {
+                                restrict: 'A',
+                                link: function (scope, element, attr) {
+                                    if (scope.$last === true) {
+                                        $timeout(function () {
+                                            scope.$emit(attr.onFinishRender);
+                                        });
+                                    }
+                                }
+                            }
+                        });
         am.controller('AppCtrl', function ($scope, $http) {            
             reset = function () {
-                $scope.resultText = [];
+                $scope.resultText = [];                
                 $scope.progressMain = 0;
                 $scope.progressSimulation = 0;
             };
             simProgress = function (resultText, progressValue) {                
-                $scope.resultText.push(resultText);
-                $scope.progressSimulation += progressValue;
+                $scope.resultText.push(resultText);                
+                $scope.progressSimulation = progressValue;
                 $scope.$apply();
             };
-            mainProgress = function (resultText, progressValue) {
-                $scope.resultText.push(resultText);
-                $scope.progressMain += progressValue;
+            mainProgress = function (resultText, progressValue) {                
+                $scope.resultText.push(resultText);                
+                $scope.progressMain = progressValue;
                 $scope.progressSimulation = 0;
                 $scope.$apply();
+            };
+            displayText = function (currentText, progressValue) {
+                $scope.resultText.push(currentText);
             };
             $scope.Start = function ()
             {
@@ -63,6 +78,9 @@
             }
             $scope.Cancel = function () { simulationBinder.onCancelClicked(); }
             $scope.SaveResults = function () { simulationBinder.onSaveClicked(); }
+            $scope.$on('ngRepeatFinished', function (ngRepeatFinishedEvent) {
+
+            });
             reset();
         });
         window.onload = function () { pageLoadBinder.onPageLoaded(); }

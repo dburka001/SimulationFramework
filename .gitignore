@@ -38,6 +38,7 @@
 *.FileListAbsolute.txt
 **/.vs/
 /packages/
+*.csproj.user
 
 
 #

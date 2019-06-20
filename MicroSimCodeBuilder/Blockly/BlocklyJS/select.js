@@ -5,13 +5,11 @@ init: function() {
         this.setInputsInline(false);
         this.appendDummyInput()
             .setAlign(Blockly.ALIGN_RIGHT)
-            .appendField(new Blockly.FieldTextInput("NameOfSelection"), "name")            
-            .appendField("Select")
-            .appendField(new Blockly.FieldDropdown([["Sum", "Sum"], ["Count", "Count"], ["Average", "Avg"]]), "type");
-        this.appendValueInput("property")
-            .setCheck("Person_properties_get")
+            .appendField(new Blockly.FieldTextInput("NameOfSelection"), "name");          
+        this.appendValueInput("property")       
+            .setCheck(null)    
             .setAlign(Blockly.ALIGN_RIGHT)
-            .appendField("of");
+            .appendField("Select");
         this.appendValueInput("where")
             .setCheck("Boolean")
             .setAlign(Blockly.ALIGN_RIGHT)
@@ -119,28 +117,19 @@ Blockly.Blocks['select_group_item'] = {
 
 Blockly.CSharp['select'] = function (block) {    
     var name = block.getFieldValue('name');
-    var dropdown_type = block.getFieldValue('type');
     var value_where = Blockly.CSharp.valueToCode(block, 'where', Blockly.CSharp.ORDER_ATOMIC);
-    if (value_where != '') value_where = '.Where(p => ' + value_where + ')';
-    var value_property = Blockly.CSharp.valueToCode(block, 'property', Blockly.CSharp.ORDER_ATOMIC);
-    var indent = 0;
+    if (value_where !== '') value_where = '\n.Where(p => ' + value_where + ')';
+    var value_property = Blockly.CSharp.valueToCode(block, 'property');    
     var linqCode = '';
-    linqCode += 'List<ResultItem> select' + name + ' = ';
-    if (value_property == '') value_property = 'p';
-    if (this.itemCount_ > 0) {
-        linqCode += 'Population';
-        linqCode += value_where;
-        linqCode += '.GroupBy(p => new { ';
-        for (var i = 0; i < this.itemCount_; i++) {
-            var currentName = this.getFieldValue('NAME' + i);
-            linqCode += currentName + ' = (' + Blockly.CSharp.valueToCode(this, 'ADD' + i, Blockly.CSharp.ORDER_COMMA) + ')';
-            if (this.itemCount_ != i + 1) { linqCode += ', '; }
-        }
-        linqCode += ' }).Select(g => new ResultItem() { Year = Year, Key = g.Key, Value = g.Select(p => ' + value_property + ').' + dropdown_type + '() }).ToList();';
+    linqCode += 'List<ResultItem> select' + name + ' = ';    
+    linqCode += 'Population';
+    linqCode += value_where;
+    linqCode += '\n.GroupBy(p => new { ';
+    for (var i = 0; i < this.itemCount_; i++) {
+        var currentName = this.getFieldValue('NAME' + i);
+        linqCode += currentName + ' = (' + Blockly.CSharp.valueToCode(this, 'ADD' + i, Blockly.CSharp.ORDER_COMMA) + '), ';         
     }
-    else {
-        linqCode += 'new List<ResultItem>();\nselect' + name + '.Add(new ResultItem() { Year = Year, Value = Population' + value_where + '.Select(p => ' + value_property + ').' + dropdown_type + '() });';
-    }
+    linqCode += ' })\n.Select(g => new ResultItem() { Year = Year, Key = g.Key, Value = new { ' + value_property + ' } }).ToList();';    
 
   
     var code = [];
@@ -151,28 +140,3 @@ Blockly.CSharp['select'] = function (block) {
     code.push('');
     return code.join('\n');
 };
-
-/*
-Blockly.CSharp['select'] = function (block) {
-    var name = block.getFieldValue('name');
-    var dropdown_type = block.getFieldValue('type');
-    var value_where = Blockly.CSharp.valueToCode(block, 'where', Blockly.CSharp.ORDER_ATOMIC);
-    var value_property = Blockly.CSharp.valueToCode(block, 'property', Blockly.CSharp.ORDER_ATOMIC);
-    var indent = 0;
-    var code = [];
-    for (var i = 0; i < this.itemCount_; i++) {
-        code.push('List<object> paramList' + i + ';');
-        var propName = Blockly.CSharp.valueToCode(this, 'ADD' + i, Blockly.CSharp.ORDER_COMMA);
-        propName = propName.substring(propName.indexOf("p.") + 2);
-        var endPosition = propName.indexOf(" ");
-        if(endPosition > 0) propName = propName.substring(0, endPosition);                
-        code.push('paramList' + i + ' =  Population.Select((x) => x.' + propName + ').Distinct().ToList<object>();');
-        code.push('if(paramList' + i + ' == null)');
-        code.push('{');
-        code.push('}');
-    }
-    code.push('Result ' + name + ' = ResultList.Find((x) => x.Name.Equals(\"' + name + '\"));');
-    code.push('if(' + name + ' == null) { ' + name + ' = new Result(\"' + name + '\", \"Year\"); ResultList.Add(' + name + '); }');    
-    return code.join('\n');
-};
-*/

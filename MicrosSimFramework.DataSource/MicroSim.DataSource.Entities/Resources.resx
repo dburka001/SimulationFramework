@@ -1,0 +1,588 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DsDetEdu" xml:space="preserve">
+    <value>Determinisztikus végzettség</value>
+  </data>
+  <data name="DspDetEdu" xml:space="preserve">
+    <value>Determinisztikus végzettség valószínűségek</value>
+  </data>
+  <data name="DspDetEduRaw" xml:space="preserve">
+    <value>Nyers determinisztikus végzettség valószínűségek</value>
+  </data>
+  <data name="DsPopulation" xml:space="preserve">
+    <value>Népesség</value>
+  </data>
+  <data name="DsPopulationEdu" xml:space="preserve">
+    <value>Népesség végzettségenként</value>
+  </data>
+  <data name="DspPopulationAgeTree" xml:space="preserve">
+    <value>Szűrt népesség korfa</value>
+  </data>
+  <data name="DspPopulationBase" xml:space="preserve">
+    <value>Szűrt népesség adatok</value>
+  </data>
+  <data name="DspPopulationEduAgeTree" xml:space="preserve">
+    <value>Népesség korfa végzettség szerint</value>
+  </data>
+  <data name="DspPopulationEduBase" xml:space="preserve">
+    <value>Szűrt népesség adatok végzettség szerint</value>
+  </data>
+  <data name="DspPopulationEduRaw" xml:space="preserve">
+    <value>Nyers népesség adatok végzettség szerint</value>
+  </data>
+  <data name="DspPopulationEduYearly" xml:space="preserve">
+    <value>Népesség adatok végzettség szerint</value>
+  </data>
+  <data name="DspPopulationExt" xml:space="preserve">
+    <value>Korrigált népesség adatok</value>
+  </data>
+  <data name="DspPopulationExtAgeTree" xml:space="preserve">
+    <value>Korrigált népesség korfa</value>
+  </data>
+  <data name="DspPopulationRaw" xml:space="preserve">
+    <value>Nyers népesség adatok</value>
+  </data>
+  <data name="EducationED02" xml:space="preserve">
+    <value>Legfeljebb 8 általános</value>
+  </data>
+  <data name="EducationED34" xml:space="preserve">
+    <value>Középfokú végzettség</value>
+  </data>
+  <data name="EducationED58" xml:space="preserve">
+    <value>Felsőfokú végzettség</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Összesen</value>
+  </data>
+  <data name="DsDeathEdu" xml:space="preserve">
+    <value>Halálozások végzettségenként</value>
+  </data>
+  <data name="DspDeathEduBase" xml:space="preserve">
+    <value>Szűrt halálozás számok végzettségek szerint</value>
+  </data>
+  <data name="DspDeathEduRaw" xml:space="preserve">
+    <value>Nyers halálozás számok végzettségek szerint</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Ismeretlen</value>
+  </data>
+  <data name="DspDeathEduAgeTree" xml:space="preserve">
+    <value>Szűrt halálozás korfa végzettségek szerint</value>
+  </data>
+  <data name="DsBirthEdu" xml:space="preserve">
+    <value>Születések végzettségenként</value>
+  </data>
+  <data name="DspBirthEduAgeTree" xml:space="preserve">
+    <value>Szűrt születés korfa végzettségek szerint</value>
+  </data>
+  <data name="DspBirthEduBase" xml:space="preserve">
+    <value>Szűrt születés számok végzettségek szerint</value>
+  </data>
+  <data name="DspBirthEduRaw" xml:space="preserve">
+    <value>Nyers születés számok végzettségek szerint</value>
+  </data>
+  <data name="NAP" xml:space="preserve">
+    <value>Nem értelmezhető</value>
+  </data>
+  <data name="DsMortality" xml:space="preserve">
+    <value>Halálozási valószínűség</value>
+  </data>
+  <data name="DspMortalityEduBase" xml:space="preserve">
+    <value>Halálozási valószínűség végzettség szerint</value>
+  </data>
+  <data name="DspMortalityEduAgeTree" xml:space="preserve">
+    <value>Halálozási valószínűség korfa végzettség szerint</value>
+  </data>
+  <data name="DspMortalityEduForecast" xml:space="preserve">
+    <value>Halálozási valószínűség előrejelzés végzettség szerint</value>
+  </data>
+  <data name="DspMortalityEduRaw" xml:space="preserve">
+    <value>Nyers halálozási valószínűség végzettség szerint</value>
+  </data>
+  <data name="DspMortalityEduRawAgeTree" xml:space="preserve">
+    <value>Nyers halálozási valószínűség korfa végzettség szerint</value>
+  </data>
+  <data name="DspDeathEduExt" xml:space="preserve">
+    <value>Korrigált halálozási számok népesség szerint</value>
+  </data>
+  <data name="DspDeathEduExtAgeTree" xml:space="preserve">
+    <value>Korrigált halálozási korfa népesség szerint</value>
+  </data>
+  <data name="DsDeath" xml:space="preserve">
+    <value>Halálozások</value>
+  </data>
+  <data name="DspDeathAgeTree" xml:space="preserve">
+    <value>Halálozás korfa</value>
+  </data>
+  <data name="DspDeathBase" xml:space="preserve">
+    <value>Nyers halálozás számok</value>
+  </data>
+  <data name="DspDeathRaw" xml:space="preserve">
+    <value>Halálozás számok</value>
+  </data>
+  <data name="DsBirth" xml:space="preserve">
+    <value>Születések</value>
+  </data>
+  <data name="DspBirthAgeTree" xml:space="preserve">
+    <value>Születés korfa</value>
+  </data>
+  <data name="DspBirthBase" xml:space="preserve">
+    <value>Születés számok</value>
+  </data>
+  <data name="DspBirthRaw" xml:space="preserve">
+    <value>Nyers születés számok</value>
+  </data>
+  <data name="BirthOrderLabel" xml:space="preserve">
+    <value>{0}. gyerek</value>
+  </data>
+  <data name="BirthOrderMoreLabel" xml:space="preserve">
+    <value>{0}. vagy későbbi gyerek</value>
+  </data>
+  <data name="ExMissingAges" xml:space="preserve">
+    <value>Hiányzó korévek az adathalmazban</value>
+  </data>
+  <data name="DspMortalityEduMultipliers" xml:space="preserve">
+    <value>Végzettségek szerinti halálozás valószínűség szorzók</value>
+  </data>
+  <data name="DspMortalityEduMultiplierAgeTree" xml:space="preserve">
+    <value>Végzettségek szerinti halálozás valószínűség szorzók korfa</value>
+  </data>
+  <data name="DspMortalityEduForecastAgeTree" xml:space="preserve">
+    <value>Halálozási valószínűség korfa előrejelzés végzettség szerint</value>
+  </data>
+  <data name="DsBirthComplete" xml:space="preserve">
+    <value>Születések részletezve</value>
+  </data>
+  <data name="DspBirthCompleteAgeTree" xml:space="preserve">
+    <value>Születés korfa részletezve</value>
+  </data>
+  <data name="DspBirthMotherRaw" xml:space="preserve">
+    <value>Nyers szülőképes nők adatok részletezve</value>
+  </data>
+  <data name="DspBirthMother" xml:space="preserve">
+    <value>Szülőképes nők adatok részletezve</value>
+  </data>
+  <data name="DspBirthMotherAgeTree" xml:space="preserve">
+    <value>Szülőképes nők korfa részletezve</value>
+  </data>
+  <data name="DspBirthComplete" xml:space="preserve">
+    <value>Születés számok részletezve</value>
+  </data>
+  <data name="DspBirthCompleteRaw" xml:space="preserve">
+    <value>Nyers születés számok részletezve</value>
+  </data>
+  <data name="DsFertility" xml:space="preserve">
+    <value>Szülési valószínűségek</value>
+  </data>
+  <data name="DspFertilityAgeTree" xml:space="preserve">
+    <value>Szülési valószínűségek korfa részletezve</value>
+  </data>
+  <data name="DspFertilityBase" xml:space="preserve">
+    <value>Szülési valószínűségek részletezve</value>
+  </data>
+  <data name="DspFertilityForecast" xml:space="preserve">
+    <value>Szülési valószínűségek előrejelzés részletezve</value>
+  </data>
+  <data name="DspFertilityForecastAgeTree" xml:space="preserve">
+    <value>Szülési valószínűségek előrejelzés korfa részletezve</value>
+  </data>
+  <data name="DspFertilityMultiplier" xml:space="preserve">
+    <value>Szülési valószínűség szorzók részletezve</value>
+  </data>
+  <data name="DspFertilityMultiplierAgeTree" xml:space="preserve">
+    <value>Szülési valószínűség szorzók korfa részletezve</value>
+  </data>
+  <data name="DspFertilityRaw" xml:space="preserve">
+    <value>Nyers szülési valószínűségek részletezve</value>
+  </data>
+  <data name="DspFertilityRawAgeTree" xml:space="preserve">
+    <value>Nyers szülési valószínűségek korfa részletezve</value>
+  </data>
+  <data name="Females" xml:space="preserve">
+    <value>Nők</value>
+  </data>
+  <data name="GenerateForceAttempt" xml:space="preserve">
+    <value>Megkísérlem újra generálni az adatokat</value>
+  </data>
+  <data name="GenerateMessage" xml:space="preserve">
+    <value>"{0}" adatgenerálása sikeresen megtörtént</value>
+  </data>
+  <data name="LoadDataSourceMessage" xml:space="preserve">
+    <value>"{0}" betöltése</value>
+  </data>
+  <data name="LoadError" xml:space="preserve">
+    <value>"{0}" betöltése során hiba történt</value>
+  </data>
+  <data name="LoadFinished" xml:space="preserve">
+    <value>Az elemek betöltése befejeződött</value>
+  </data>
+  <data name="LoadMessage" xml:space="preserve">
+    <value>"{0}" beolvasása sikeresen megtörtént</value>
+  </data>
+  <data name="LoadStared" xml:space="preserve">
+    <value>{0} db elem betöltése</value>
+  </data>
+  <data name="Males" xml:space="preserve">
+    <value>Férfiak</value>
+  </data>
+  <data name="SourceFolder" xml:space="preserve">
+    <value>Adatforrások</value>
+  </data>
+  <data name="Age" xml:space="preserve">
+    <value>Életkor</value>
+  </data>
+  <data name="DsOutput" xml:space="preserve">
+    <value>Kimenet</value>
+  </data>
+  <data name="Education" xml:space="preserve">
+    <value>Végzettség</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Nem</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Érték</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Év</value>
+  </data>
+  <data name="DspOutputMortality" xml:space="preserve">
+    <value>Mortalitás</value>
+  </data>
+  <data name="DspStartComplete" xml:space="preserve">
+    <value>Teljes induló népesség</value>
+  </data>
+  <data name="DspStartRaw" xml:space="preserve">
+    <value>Nyers induló népesség</value>
+  </data>
+  <data name="DsStartingPopulation" xml:space="preserve">
+    <value>Induló népesség</value>
+  </data>
+  <data name="DspOutputPopulation" xml:space="preserve">
+    <value>Induló népesség</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Nő</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Férfi</value>
+  </data>
+  <data name="BirthOrder" xml:space="preserve">
+    <value>Gyermekek száma</value>
+  </data>
+  <data name="ExportDirectory" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ExcelFilename" xml:space="preserve">
+    <value>ParaméterTáblák</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>Súly</value>
+  </data>
+  <data name="DspOutputFertility" xml:space="preserve">
+    <value>Fertilitás</value>
+  </data>
+  <data name="DspOutputFertilityTotal" xml:space="preserve">
+    <value>Fertilitás teljes</value>
+  </data>
+  <data name="ChildEducation" xml:space="preserve">
+    <value>Gyermek végzettsége</value>
+  </data>
+  <data name="DetEducationType" xml:space="preserve">
+    <value>Végzettség típus</value>
+  </data>
+  <data name="DsOther" xml:space="preserve">
+    <value>Egyéb</value>
+  </data>
+  <data name="DspEduBasedVar" xml:space="preserve">
+    <value>Végzettségfüggő alapváltozók</value>
+  </data>
+  <data name="DspOutputEducation" xml:space="preserve">
+    <value>Végzettség valószínűség</value>
+  </data>
+  <data name="DspOutputStartingIncome" xml:space="preserve">
+    <value>Induló jövedelem</value>
+  </data>
+  <data name="DspOutputWorkYearStart" xml:space="preserve">
+    <value>Munkaviszony kezdete</value>
+  </data>
+  <data name="EducationType" xml:space="preserve">
+    <value>Végzettség típus</value>
+  </data>
+  <data name="MotherEducation" xml:space="preserve">
+    <value>Anya végzettsége</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Alap</value>
+  </data>
+  <data name="Optimistic" xml:space="preserve">
+    <value>Optimista</value>
+  </data>
+  <data name="Pessimistic" xml:space="preserve">
+    <value>Pesszimista</value>
+  </data>
+  <data name="DspIncomeIncrease" xml:space="preserve">
+    <value>Jövedelem növekedés</value>
+  </data>
+  <data name="DspIncomeIncreaseGraphs" xml:space="preserve">
+    <value>Jövedelem növekedés ábrák</value>
+  </data>
+  <data name="DspOutputIncomeIncrease" xml:space="preserve">
+    <value>Jövedelem növekedés</value>
+  </data>
+  <data name="Income" xml:space="preserve">
+    <value>Jövedelme</value>
+  </data>
+  <data name="IncomeTotal" xml:space="preserve">
+    <value>Életpálya jövedelem</value>
+  </data>
+  <data name="Increment" xml:space="preserve">
+    <value>Növekmény</value>
+  </data>
+  <data name="Percentage" xml:space="preserve">
+    <value>Százalék</value>
+  </data>
+  <data name="WorkYears" xml:space="preserve">
+    <value>Munkában töltött évek</value>
+  </data>
+  <data name="ActiveYear" xml:space="preserve">
+    <value>Aktivitás kezdőéve</value>
+  </data>
+  <data name="DspImmigrantSettings" xml:space="preserve">
+    <value>Bevándorló eloszlások</value>
+  </data>
+  <data name="DspMinorityRates" xml:space="preserve">
+    <value>Kisebbségi arányok</value>
+  </data>
+  <data name="DspStartWithMinorities" xml:space="preserve">
+    <value>Teljes induló népesség kisebbségekkel</value>
+  </data>
+  <data name="DspStartWithMinoritiesAndMigrants" xml:space="preserve">
+    <value>Teljes induló népesség kisebbségekkel és bevándorlókkal</value>
+  </data>
+  <data name="DspWorkStatus" xml:space="preserve">
+    <value>Szolgálati státusz</value>
+  </data>
+  <data name="DspWorkStatusRaw" xml:space="preserve">
+    <value>Nyers szolgálati státusz</value>
+  </data>
+  <data name="Immigrant" xml:space="preserve">
+    <value>Bevándorló</value>
+  </data>
+  <data name="Majority" xml:space="preserve">
+    <value>Többségi népesség</value>
+  </data>
+  <data name="Minority" xml:space="preserve">
+    <value>Kisebbség</value>
+  </data>
+  <data name="SocialGroup" xml:space="preserve">
+    <value>Társadalmi csoport</value>
+  </data>
+  <data name="SocialGroupsDataSource" xml:space="preserve">
+    <value>Társadalmi csoportok</value>
+  </data>
+  <data name="WorkStatus" xml:space="preserve">
+    <value>Munkavállalói státusz</value>
+  </data>
+  <data name="WorkStatusA" xml:space="preserve">
+    <value>Teljes évet dolgozott</value>
+  </data>
+  <data name="WorkStatusB1" xml:space="preserve">
+    <value>Több, mint háromnegyed évet dolgozott</value>
+  </data>
+  <data name="WorkStatusB2" xml:space="preserve">
+    <value>Több, mint fél évet dolgozott</value>
+  </data>
+  <data name="WorkStatusB3" xml:space="preserve">
+    <value>Több, mint negyed évet dolgozott</value>
+  </data>
+  <data name="WorkStatusB4" xml:space="preserve">
+    <value>Legfeljebb negyed évet dolgozott</value>
+  </data>
+  <data name="WorkStatusG" xml:space="preserve">
+    <value>Nem dolgozott</value>
+  </data>
+  <data name="DspOutputPensionMultiplier" xml:space="preserve">
+    <value>Nyugdíj szorzók</value>
+  </data>
+  <data name="DspOutputWorkStatus" xml:space="preserve">
+    <value>Munkavállalói státusz átmenet</value>
+  </data>
+  <data name="DspPensionMultiplier" xml:space="preserve">
+    <value>Nyugdíj szorzók</value>
+  </data>
+  <data name="WorkStatusCurrent" xml:space="preserve">
+    <value>Jelenlegi foglalkoztatási státusz</value>
+  </data>
+  <data name="WorkStatusNext" xml:space="preserve">
+    <value>Következő foglalkoztatási státusz</value>
+  </data>
+  <data name="BirthYear" xml:space="preserve">
+    <value>Születési év</value>
+  </data>
+  <data name="DspOutputSocialGroupEducationType" xml:space="preserve">
+    <value>Társadalmi csoport végzettség típusa</value>
+  </data>
+  <data name="DspSocialGroupEducationType" xml:space="preserve">
+    <value>Társadalmi csoport végzettség típusa</value>
+  </data>
+  <data name="DspOutputWorkStatusMaxTime" xml:space="preserve">
+    <value>Munkavállalói státusz ideje Max</value>
+  </data>
+  <data name="DspOutputWorkStatusMinTime" xml:space="preserve">
+    <value>Munkavállalói státusz ideje Min</value>
+  </data>
+  <data name="DspWorkStatusTime" xml:space="preserve">
+    <value>Szolgálati státusz ideje</value>
+  </data>
+  <data name="Base" xml:space="preserve">
+    <value>Alap</value>
+  </data>
+  <data name="DspOutputPensionBase" xml:space="preserve">
+    <value>Nyugdíjtípus alapértéke</value>
+  </data>
+  <data name="DspOutputPensionTheta" xml:space="preserve">
+    <value>Nyugdíjtípus alapszorzója</value>
+  </data>
+  <data name="DspPensionBasedVar" xml:space="preserve">
+    <value>Nyugdíjtípustól függő alapváltozók</value>
+  </data>
+  <data name="Hybrid" xml:space="preserve">
+    <value>Hibrid</value>
+  </data>
+  <data name="PensionType" xml:space="preserve">
+    <value>Nyugdíj típus</value>
+  </data>
+  <data name="Variable" xml:space="preserve">
+    <value>Változó</value>
+  </data>
+  <data name="DspEconomicGrowth" xml:space="preserve">
+    <value>Gazdasági növekedés</value>
+  </data>
+  <data name="DspOutputEconomicGrowth" xml:space="preserve">
+    <value>Gazdasági növekedés</value>
+  </data>
+  <data name="DspOutputPopulationValidation" xml:space="preserve">
+    <value>Validáló induló népesség</value>
+  </data>
+  <data name="DspStartValidation" xml:space="preserve">
+    <value>Validáló induló népesség</value>
+  </data>
+</root>

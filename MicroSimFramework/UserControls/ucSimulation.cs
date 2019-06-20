@@ -55,16 +55,19 @@ namespace MicroSimFramework
         private void Sim_SimulationStarted(object sender, EventArgs e)
         {
             Started(sender, new EventArgs());
+            ModelWebControl.Instance.GetMainFrame().ExecuteJavaScriptAsync("displayText('---START---');");
         }
 
         private void Sim_SimulationFinishedCompletely(object sender, EventArgs e)
         {
             Stopped(sender, new EventArgs());
+            ModelWebControl.Instance.GetMainFrame().ExecuteJavaScriptAsync("displayText('---END---');");
         }
 
         private void Sim_SimulationFinished(object sender, SimulationFinishedEventArgs e)
         {                                    
-            ModelWebControl.Instance.GetMainFrame().ExecuteJavaScriptAsync("mainProgress(''," + e.Progress + ")");            
+            ModelWebControl.Instance.GetMainFrame().ExecuteJavaScriptAsync("mainProgress(''," + e.Progress + ")");
+            ModelWebControl.Instance.GetMainFrame().ExecuteJavaScriptAsync("displayText('Simulation Finished');");            
         }
 
         private void Sim_YearFinished(object sender, YearFinishedEventArgs e)

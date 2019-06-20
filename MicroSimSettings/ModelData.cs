@@ -35,6 +35,7 @@ namespace MicroSimSettings
 
         public void AddSimulationResult(SimulationResult sr)
         {
+            FinishedSimulations.Add(sr);
             addAgeTreeResults(sr);
         }
 
@@ -64,6 +65,7 @@ namespace MicroSimSettings
             PropertyInfo[] keyProperties = keyType.GetProperties();
             if (keyProperties.Count() != 2) return null; // Exactly 2 properties are required            
             if (data.Select(x => keyProperties[0].GetValue(x.Key)).Distinct().Count() != 2) return null; // Property 0 should be gender
+            if (data.FirstOrDefault().CheckValue<int>("Korfa")) return null;
             List<int> years = data.Select(x => x.Year).Distinct().ToList<int>(); years.Sort();
             return createAgeTreeInput(years, data, keyProperties);
         }
@@ -88,15 +90,18 @@ namespace MicroSimSettings
                     string groupString = "{ group: '" + currentGroup.Key + "' ";                    
                     bool isMale = true;
                     foreach (var item in currentGroup.OrderBy(p => keyProperties[0].GetValue(p.Key)))
-                    {
+                    {                        
                         if (isMale)
                         {
                             isMale = false;
                             groupString += ", male: ";
                         }
                         else groupString += ", female: ";
-                        groupString += item.Value.ToString();
-                        if (item.Value > xMax) xMax = item.Value;
+                        var currentValue = item.GetValue<int>("Korfa");
+                        groupString += currentValue.ToString();                        
+                        if (currentValue > xMax) xMax = currentValue;
+                        // groupString += (item.Value * 210.0 / 1000.0).ToString();
+                        // if (item.Value * 210.0 / 1000.0 > xMax) xMax = (item.Value * 210.0 / 1000.0);
                     }
                     groupString += "}";
                     if (currentGroup != groupedData.Last()) groupString += ", ";

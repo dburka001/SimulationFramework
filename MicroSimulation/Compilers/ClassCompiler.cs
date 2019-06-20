@@ -66,7 +66,8 @@ namespace MicroSimulation
             if (type == DynamicClassType.Household)
             {
                 fieldCode += "\t\tpublic List<Person> Members { get; set; }" + Environment.NewLine;
-                fieldCode += "\t\tpublic int MemberCount { get { return Members.Where( p => p.FamilyStatus == 4 ).Count(); } }" + Environment.NewLine;
+                //fieldCode += "\t\tpublic int MemberCount { get { return Members.Where( p => p.FamilyStatus == 4 ).Count(); } }" + Environment.NewLine;
+                fieldCode += "\t\tpublic int MemberCount { get { return Members.Count(); } }" + Environment.NewLine;
             }
             if (type == DynamicClassType.Person && ModelSettings.Instance.UseHouseholds)
                 fieldCode += "\t\tpublic Household Household { get; set; }" + Environment.NewLine;

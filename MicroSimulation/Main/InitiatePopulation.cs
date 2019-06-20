@@ -57,7 +57,7 @@ namespace MicroSimulation
         private void createPeople(DataRow[] currentDataRows)
         {
             bool isFirst = false;
-            int multiplier = 0; // Multiplier has to be the same for every person in household        
+            int multiplier = 1; // Multiplier has to be the same for every person in household        
 
             object currentHousehold = null;
             IList currentMembers = null;            
@@ -67,10 +67,12 @@ namespace MicroSimulation
                 currentHousehold = Activator.CreateInstance(Household);
                 currentMembers = (IList)HouseholdMembersGet(currentHousehold);
                 Households.Add(currentHousehold);                
-            }            
+            }
 
+            int counter = 0;
             foreach (DataRow row in currentDataRows)
             {
+                counter++;
                 CancelTokenSource.Token.ThrowIfCancellationRequested();
                 if (isFirst)
                 {
@@ -86,31 +88,32 @@ namespace MicroSimulation
                 object currentPerson = Activator.CreateInstance(Person);                
                 for (int fieldId = 0; fieldId < currentPersonFields.Count; fieldId++)
                 {
-                    ClassField field = currentPersonFields[fieldId];                
+                    ClassField field = currentPersonFields[fieldId];                    
                     object currentValue = Convert.ChangeType(row.Field<string>(field.DefaultDataField.ColumnName), field.DefaultType.Type);
                     if (field.DefaultType.Type == typeof(string)) currentValue = "\"" + currentValue + "\"";
                     PersonFieldSet[fieldId](currentPerson, currentValue);
                 }
+                if (Settings.MultiplierField != null)
+                    multiplier = Convert.ToInt32(row.Field<string>(Settings.MultiplierField.ColumnName));
+                if (multiplier == 0)
+                    continue;
                 Population.Add(currentPerson);
                 if (Settings.UseHouseholds)
                 {
                     PersonHouseholdSet(currentPerson, currentHousehold);                    
                     currentMembers.Add(currentPerson);
-                }                
-                if (Settings.MultiplierField != null)
+                    continue;
+                }                                               
+                for (int i = 1; i < multiplier; i++)
                 {
-                    multiplier = Convert.ToInt32(row.Field<string>(Settings.MultiplierField.ColumnName));
-                    if (Settings.UseHouseholds) continue;
-                    for (int i = 1; i < multiplier - 1; i++)
-                    {
-                        Population.Add(PersonClone(currentPerson));
-                    }
+                    Population.Add(PersonClone(currentPerson));
                 }
+                
             }
 
             if (Settings.UseHouseholds && Settings.MultiplierField != null)
             {
-                for (int i = 1; i < multiplier - 1; i++)
+                for (int i = 1; i < multiplier; i++)
                 {
                     object newHousehold = HouseholdClone(currentHousehold);
                     Households.Add(newHousehold);                   

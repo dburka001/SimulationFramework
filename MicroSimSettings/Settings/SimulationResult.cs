@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -39,6 +40,23 @@ namespace MicroSimSettings
     {
         public int Year { get; set; }
         public object Key { get; set; }
-        public double Value { get; set; }
-    }
+        public object Value { get; set; }        
+
+        public T GetValue<T>(string valueName)
+        {
+            Type type = Value.GetType();
+            T itemvalue = (T)type.GetProperty(valueName).GetValue(Value, null);
+            return itemvalue;
+        }
+
+        public bool CheckValue<T>(string valueName)
+        {
+            Type type = Value.GetType();
+            PropertyInfo property = type.GetProperty(valueName);
+            if (property == null)
+                return false;
+            else
+                return property.GetType() == typeof(T);               
+        }
+    }    
 }

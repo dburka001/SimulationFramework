@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C5BA838A-0EF8-4B3E-9794-629493813CE5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MicroSim.DataSource.StartingPopulation</RootNamespace>
+    <AssemblyName>MicroSim.DataSource.StartingPopulation</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\StartingValidationEntity.cs" />
+    <Compile Include="Entities\StartingEntity.cs" />
+    <Compile Include="Parts\DspStartValidation.cs" />
+    <Compile Include="Parts\DspStartWithMinoritiesAndMigrants.cs" />
+    <Compile Include="Parts\DspStartWithMinorities.cs" />
+    <Compile Include="Parts\DspStartRaw.cs" />
+    <Compile Include="StartingPopulationDataSource.cs" />
+    <Compile Include="Parts\DspStartComplete.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MicroSim.DataSource.BirthComplete\MicroSim.DataSource.BirthComplete.csproj">
+      <Project>{92AB732E-511E-407E-9AE8-A991B1548718}</Project>
+      <Name>MicroSim.DataSource.BirthComplete</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MicroSim.DataSource.Core\MicroSim.DataSource.Core.csproj">
+      <Project>{6AA5F34F-103D-4EC0-B229-F5B670336313}</Project>
+      <Name>MicroSim.DataSource.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MicroSim.DataSource.Entities\MicroSim.DataSource.Entities.csproj">
+      <Project>{6d68d2f9-e3d0-4899-9915-a40146cebb9a}</Project>
+      <Name>MicroSim.DataSource.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MicroSim.DataSource.PopulationEdu\MicroSim.DataSource.PopulationEdu.csproj">
+      <Project>{B7E3F74E-B362-4B5B-91F3-9D81B07E888F}</Project>
+      <Name>MicroSim.DataSource.PopulationEdu</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MicroSim.DataSource.Population\MicroSim.DataSource.Population.csproj">
+      <Project>{1BE66C04-5858-4431-9AB8-FA052023C4AF}</Project>
+      <Name>MicroSim.DataSource.Population</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MicroSim.DataSource.SocialGroups\MicroSim.DataSource.SocialGroups.csproj">
+      <Project>{1FAF6AA8-DAA2-44A9-8ED7-6384378D56BE}</Project>
+      <Name>MicroSim.DataSource.SocialGroups</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

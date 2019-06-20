@@ -79,13 +79,13 @@ Blockly.CSharp.math_single = function() {
       code = 'Math.Pow(' + arg + ', 10)';
       break;
     case 'ROUND':
-      code = 'Math.Round(' + arg + ')';
+      code = 'Convert.ToInt32(Math.Round(' + arg + '))';
       break;
     case 'ROUNDUP':
-      code = 'Math.Ceil(' + arg + ')';
+      code = 'Convert.ToInt32(Math.Ceil(' + arg + '))';
       break;
     case 'ROUNDDOWN':
-      code = 'Math.Floor(' + arg + ')';
+      code = 'Convert.ToInt32(Math.Floor(' + arg + '))';
       break;
     case 'SIN':
       code = 'Math.Sin(' + arg + ' / 180 * Math.PI)';

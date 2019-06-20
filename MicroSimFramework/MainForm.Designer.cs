@@ -116,7 +116,7 @@
             this.Controls.Add(this.btnPrevious);
             this.Controls.Add(this.panelMain);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "Simulation Framework";
             this.ResumeLayout(false);
 
         }

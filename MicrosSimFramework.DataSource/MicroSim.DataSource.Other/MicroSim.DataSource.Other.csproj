@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6B457D3-F5C1-4F86-8CAE-FCE6DA4AB03E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MicroSim.DataSource.Other</RootNamespace>
+    <AssemblyName>MicroSim.DataSource.Other</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\EconomicGrowthEntity.cs" />
+    <Compile Include="Entities\PensionBasedVarEntity.cs" />
+    <Compile Include="Entities\PensionMultiplierEntity.cs" />
+    <Compile Include="Entities\WorkStatusTimeEntity.cs" />
+    <Compile Include="Entities\WorkStatusEntity.cs" />
+    <Compile Include="Entities\SocialGroupEducationTypeEntity.cs" />
+    <Compile Include="Entities\WorkStatusRawEntity.cs" />
+    <Compile Include="Entities\IncomeIncreaseDisplayEntity.cs" />
+    <Compile Include="Entities\IncomeIncreaseEntity.cs" />
+    <Compile Include="Entities\EduBasedVarEntity.cs" />
+    <Compile Include="OtherDataSource.cs" />
+    <Compile Include="Parts\DspEconomicGrowth.cs" />
+    <Compile Include="Parts\DspPensionBasedVar.cs" />
+    <Compile Include="Parts\DspWorkStatus.cs" />
+    <Compile Include="Parts\DspPensionMultiplier.cs" />
+    <Compile Include="Parts\DspWorkStatusTime.cs" />
+    <Compile Include="Parts\DspWSocialGroupEducationType.cs" />
+    <Compile Include="Parts\DspWorkStatusRaw.cs" />
+    <Compile Include="Parts\DspIncomeIncreaseGraphs.cs" />
+    <Compile Include="Parts\DspIncomeIncrease.cs" />
+    <Compile Include="Parts\DspEduBasedVar.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\IncomeIncreaseUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\IncomeIncreaseUC.Designer.cs">
+      <DependentUpon>IncomeIncreaseUC.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MicroSim.DataSource.Core\MicroSim.DataSource.Core.csproj">
+      <Project>{6AA5F34F-103D-4EC0-B229-F5B670336313}</Project>
+      <Name>MicroSim.DataSource.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MicroSim.DataSource.Entities\MicroSim.DataSource.Entities.csproj">
+      <Project>{6D68D2F9-E3D0-4899-9915-A40146CEBB9A}</Project>
+      <Name>MicroSim.DataSource.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UserControls\IncomeIncreaseUC.resx">
+      <DependentUpon>IncomeIncreaseUC.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

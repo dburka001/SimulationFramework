@@ -8,6 +8,7 @@ using System.Threading;
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Reflection;
+using System.Diagnostics;
 
 namespace MicroSimulation
 {    
@@ -15,6 +16,7 @@ namespace MicroSimulation
     {
         public ModelSettings Settings;
         public CancellationTokenSource CancelTokenSource { get; set; }
+        public long ElapsedTime { get; set; }
         private List<Result> Results;
         private static Random GlobalRng;
         private ParallelOptions p = new ParallelOptions();        
@@ -22,6 +24,7 @@ namespace MicroSimulation
         private Constant[] multiValueContstants;
         private int currentSimulation;
         private int nbrOfSimulations = 1;
+        private Stopwatch stopWatch = new Stopwatch();        
 
         public event SimulationStarted SimulationStarted;
         public event YearFinished YearFinished;
@@ -32,12 +35,13 @@ namespace MicroSimulation
         public Simulation()
         {
             this.Settings = ModelSettings.Instance;
-            this.p.MaxDegreeOfParallelism = 8;
+            this.p.MaxDegreeOfParallelism = 8;            
             this.CancelTokenSource = new CancellationTokenSource();            
         }
 
         public void Run()
         {
+            stopWatch.Reset(); stopWatch.Start();
             SimulationStarted(this, new EventArgs());
             ClearMemory();
             foreach (Constant c in Settings.Constants) c.CurrentValue = c.From;            
@@ -53,6 +57,8 @@ namespace MicroSimulation
         public void Cancel()
         {
             this.CancelTokenSource.Cancel();
+            stopWatch.Stop();
+            this.ElapsedTime = stopWatch.ElapsedMilliseconds;
             Canceled(this, new EventArgs());
         }
 
@@ -170,52 +176,87 @@ namespace MicroSimulation
                             runSimulation();
                             break;
                         }
-                    }
-                    SimulationFinishedCompletely(this, new EventArgs());
+                    }                    
                 }
             }, TaskContinuationOptions.NotOnCanceled);
         }
 
         public string ResultsAsString()
         {
-            string resultString = "";
-
-            foreach (Result r in Results)
+            List<string> resultString = new List<string>();            
+            resultString.Add("Runtime;" + ElapsedTime.ToString());
+            
+            for (int rTypeID = 0; rTypeID < Results.Count; rTypeID++) // Loop through each result type
             {
-                if (r.Values.Count == 0) continue;
+                bool isFirst = true;
+                foreach (var sr in ModelData.Instance.FinishedSimulations)
+                {
+                    Result r = sr.Results[rTypeID];
+                    if (r.Values.Count == 0) continue;
 
-                PropertyInfo[] props = new PropertyInfo[0];
-                resultString += r.Name + Environment.NewLine;
-                if (r.Values[0].Key != null)
-                    props = r.Values[0].Key.GetType().GetProperties();
-                Func<object, object>[] propGet = new Func<object, object>[props.Length];
-                resultString += "Year;";
-                for (int propId = 0; propId < props.Length; propId++)                
-                {
-                    resultString += props[propId].Name + ";";
-                    propGet[propId] = createGetDelegate(props[propId]);
-                }
-                resultString += "Value" + Environment.NewLine;
-                
-                foreach (ResultItem item in r.Values)
-                {
-                    resultString += item.Year + ";";
+                    // Property info
+                    PropertyInfo[] props = new PropertyInfo[0];
+                    if (r.Values[0].Key != null)
+                        props = r.Values[0].Key.GetType().GetProperties();
+                    Func<object, object>[] propGet = propGet = new Func<object, object>[props.Length];
                     for (int propId = 0; propId < props.Length; propId++)
-                    {
-                        resultString += propGet[propId](item.Key).ToString() + ";";
+                    {                     
+                        propGet[propId] = createGetDelegate(props[propId]);
                     }
-                    resultString += + item.Value + Environment.NewLine;
+
+                    // Header row
+                    if (isFirst)
+                    {
+                        resultString.Add(r.Name);
+
+                        var header = new List<string>();
+                        header.Add("Year");
+                        for (int propId = 0; propId < props.Length; propId++)
+                        {
+                            header.Add(props[propId].Name);                     
+                        }
+                        foreach (var sParam in sr.Params)
+                        {
+                            header.Add(sParam.Key);                            
+                        }
+                        foreach (var p in r.Values[0].Value.GetType().GetProperties())
+                        {
+                            header.Add(p.Name);
+                        }
+                        resultString.Add(String.Join(";", header));
+                        isFirst = false;
+                    }
+
+                    // Resultrows
+                    foreach (ResultItem item in r.Values)
+                    {
+                        List<string> rowString = new List<string>();
+                        rowString.Add(item.Year.ToString());
+                        for (int propId = 0; propId < props.Length; propId++)
+                        {
+                            rowString.Add(propGet[propId](item.Key).ToString());
+                        }
+                        foreach (var sParam in sr.Params)
+                        {
+                            rowString.Add(sParam.Value.ToString());
+                        }
+                        foreach (var p in r.Values[0].Value.GetType().GetProperties())
+                        {
+                            rowString.Add(p.GetValue(item.Value).ToString());
+                        }                        
+                        resultString.Add(String.Join(";", rowString));
+                    }
                 }
             }
 
-            return resultString;
+            return String.Join(Environment.NewLine, resultString);
         }
 
         private void endYearResults(int year)
         {
             YearFinishedEventArgs re = new YearFinishedEventArgs();            
             re.Progress = (int)Math.Floor((double)100 * (year - Settings.StartYear + 1) / (double)(Settings.EndYear - Settings.StartYear + 1));
-            re.Year = year;
+            re.Year = year;           
             GetResults.Invoke(Population, Households, Results, year);     
             if (YearFinished != null) YearFinished(this, re);
         }
@@ -232,7 +273,11 @@ namespace MicroSimulation
             }
             ModelData.Instance.AddSimulationResult(new SimulationResult(sfe.SimParams, sfe.Results));
             //this.Results.Clear();
-            if (SimulationFinished != null) SimulationFinished(this, sfe);            
+            if (SimulationFinished != null) SimulationFinished(this, sfe);
+            if (currentSimulation != nbrOfSimulations) return;
+            stopWatch.Stop();
+            this.ElapsedTime = stopWatch.ElapsedMilliseconds;
+            SimulationFinishedCompletely(this, new EventArgs());
         }
 
         #region IDisposable Support

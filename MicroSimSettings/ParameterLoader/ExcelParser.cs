@@ -8,11 +8,12 @@ using System.Text.RegularExpressions;
 using System.IO;
 using System.Globalization;
 using System.ComponentModel;
+using DocumentFormat.OpenXml;
 
 namespace MicroSimSettings
 {    
     public class ExcelParser
-    {
+    {        
         public static void Parse(string fileName, SimulationEnvironment simulationEnvironment)
         {
             Regex rx = new Regex("^lista:");
@@ -22,7 +23,6 @@ namespace MicroSimSettings
 
             using (SpreadsheetDocument sp = SpreadsheetDocument.Open(fileName, false))
             {
-                int row_min = 0, row_max = 0; //Hack
                 List<int> lst_regex_index = new List<int>();
                 List<int> lst_tabla_index = new List<int>();
                 List<int> lst_meta_index = new List<int>();                
@@ -63,47 +63,28 @@ namespace MicroSimSettings
                     WorksheetPart worksheetPart = (WorksheetPart)sp.WorkbookPart.GetPartById(relationshipId);
                     string[] dimension = (worksheetPart.Worksheet.SheetDimension.GetAttribute("ref", "").Value).Split(':');
                     if (dimension.Length == 1) continue; //Empty worksheet -- skiping
-                    for (int i = 0; i < 2; i++)
+
+                    OpenXmlReader reader = OpenXmlReader.Create(worksheetPart);
+                    while (reader.Read())
                     {
-                        int k;
-                        for (int z = 0; z < dimension[i].Length; z++)
+                        if (reader.ElementType != typeof(Row)) continue;
+                        
+                        Row activerow = (Row)reader.LoadCurrentElement();
+                        foreach (Cell cell in activerow)
                         {
-                            if (Int32.TryParse(dimension[i][z].ToString(), out k) == true)
+                            if (cell != null && cell.CellValue != null && cell.DataType != null && cell.DataType.HasValue)
                             {
-                                if (i == 0)
+                                foreach (int index in lst_regex_index)
                                 {
-                                    row_min = Convert.ToInt32(dimension[i].Substring(z));
-                                    break;
+                                    if (cell.DataType.Value == CellValues.SharedString && cell.InnerText == index.ToString()) lst_regex_koord.Add(cell.CellReference);
                                 }
-                                else
+                                foreach (int index in lst_tabla_index)
                                 {
-                                    row_max = Convert.ToInt32(dimension[i].Substring(z));
-                                    break;
+                                    if (cell.DataType.Value == CellValues.SharedString && cell.InnerText == index.ToString()) lst_tabla_koord.Add(cell.CellReference);
                                 }
-                            }
-                        }
-                    }
-                    for (int rowindex = row_min; rowindex < row_max + 1; rowindex++)
-                    {
-                        Row activerow = worksheetPart.Worksheet.GetFirstChild<SheetData>().Elements<Row>().Where(x => x.RowIndex == rowindex).FirstOrDefault();
-                        if (activerow != null)
-                        {
-                            foreach (Cell cell in activerow)
-                            {
-                                if (cell != null && cell.CellValue != null && cell.DataType != null && cell.DataType.HasValue)
+                                foreach (int index in lst_meta_index)
                                 {
-                                    foreach (int index in lst_regex_index)
-                                    {
-                                        if (cell.DataType.Value == CellValues.SharedString && cell.InnerText == index.ToString()) lst_regex_koord.Add(cell.GetAttribute("r", "").Value);
-                                    }
-                                    foreach (int index in lst_tabla_index)
-                                    {
-                                        if (cell.DataType.Value == CellValues.SharedString && cell.InnerText == index.ToString()) lst_tabla_koord.Add(cell.GetAttribute("r", "").Value);
-                                    }
-                                    foreach (int index in lst_meta_index)
-                                    {
-                                        if (cell.DataType.Value == CellValues.SharedString && cell.InnerText == index.ToString()) lst_meta_koord.Add(cell.GetAttribute("r", "").Value);
-                                    }
+                                    if (cell.DataType.Value == CellValues.SharedString && cell.InnerText == index.ToString()) lst_meta_koord.Add(cell.CellReference);
                                 }
                             }
                         }
@@ -204,6 +185,8 @@ namespace MicroSimSettings
                                 nk.Name = shared_text[k].InnerText.Substring(6);
                             }
                         }
+                        if (lista[0] == "CURREDU")
+                        { }
                         while (tovabb)
                         {
                             Row next_row = worksheetPart.Worksheet.GetFirstChild<SheetData>().Elements<Row>().Where(r => r.RowIndex == rowindex + 1).FirstOrDefault();
@@ -216,7 +199,7 @@ namespace MicroSimSettings
                                     if (right_cella != null && right_cella.CellValue != null)// && right_cella.DataType != null && right_cella.DataType.HasValue) csak szám van beírva akkor nincs DataType
                                     {
                                         int k = Convert.ToInt32(next_cella.InnerText);
-                                        if (Convert.ToInt32(right_cella.InnerText) > 0) lista.Add(shared_text[k].InnerText + " = " + right_cella.InnerText);
+                                        if (Convert.ToInt32(right_cella.InnerText) >= 0) lista.Add(shared_text[k].InnerText + " = " + right_cella.InnerText);
                                         int value;
                                         int.TryParse(right_cella.InnerText,out value);
                                         nk.Elemek.Add(new NómentklatúraElem(shared_text[k].InnerText, value));
@@ -305,42 +288,43 @@ namespace MicroSimSettings
                             }*/
                             vt.OszlopNevek = oszlop_nevek; //*
                         }
-                        
-                        while (tovabb)
+
+                        reader = OpenXmlReader.Create(worksheetPart);                        
+                        while (tovabb && reader.Read())
                         {
                             //int nem = 0;
                             //int ev = 0;
                             //int kor = 0;
-                            Row next_row = worksheetPart.Worksheet.GetFirstChild<SheetData>().Elements<Row>().Where(r => r.RowIndex == rowindex + 1).FirstOrDefault();
+                            if (reader.ElementType != typeof(Row)) continue;
+                            Row next_row = (Row)reader.LoadCurrentElement();
+                            if (next_row.RowIndex < rowindex + 1) continue;
+                            // Row next_row = worksheetPart.Worksheet.GetFirstChild<SheetData>().Elements<Row>().Where(r => r.RowIndex == rowindex + 1).FirstOrDefault();
                             bool nincstovabb = false;
-                            if (next_row != null)
+                            if (next_row == null) { tovabb = false; continue; }
+                            
+                            TáblázatSor ts = new TáblázatSor();
+                            for (int i = 0; i < oszlop_nevek.Count; i++)
                             {
-                                TáblázatSor ts = new TáblázatSor();
-                                for (int i = 0; i < oszlop_nevek.Count; i++)
+                                Cell next_cell = next_row.Elements<Cell>().Where(c => c.CellReference == lst_columnlist[first_column + i] + (rowindex + 1).ToString()).FirstOrDefault();
+                                if (next_cell == null || next_cell.InnerText == "")
                                 {
-                                    Cell next_cell = next_row.Elements<Cell>().Where(c => c.CellReference == lst_columnlist[first_column + i] + (rowindex + 1).ToString()).FirstOrDefault();
-                                    if (next_cell == null || next_cell.InnerText == "")
-                                    {
-                                        nincstovabb = true;
-                                        break;
-                                    } 
-                                    if (i != oszlop_nevek.Count - 1)
-                                    {
-                                        int cell_value = Convert.ToInt32(next_cell.InnerText);
-                                        ts.Indices.Add(cell_value);
-                                    }
-                                    else
-                                    {
-                                        ts.Value = double.Parse(next_cell.InnerText, CultureInfo.InvariantCulture);
-                                    }
+                                    nincstovabb = true;
+                                    break;
                                 }
-                                if (!nincstovabb) vt.AddLine(ts);
-                                else tovabb = false;
-                                rowindex++;
+                                if (i != oszlop_nevek.Count - 1)
+                                {
+                                    int cell_value = Convert.ToInt32(next_cell.InnerText);
+                                    ts.Indices.Add(cell_value);
+                                }
+                                else
+                                {
+                                    ts.Value = double.Parse(next_cell.InnerText, CultureInfo.InvariantCulture);
+                                }
                             }
+                            if (!nincstovabb) vt.AddLine(ts);
                             else tovabb = false;
+                            rowindex++;
                         }
-
                         //vt.Proceess();
                     }
                 }

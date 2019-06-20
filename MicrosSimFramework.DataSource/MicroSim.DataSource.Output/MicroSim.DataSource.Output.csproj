@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{36E03885-3E95-49A5-8BA2-215F654D769F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MicroSim.DataSource.Output</RootNamespace>
+    <AssemblyName>MicroSim.DataSource.Output</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\OutputEconomicGrowthEntity.cs" />
+    <Compile Include="Entities\OutputPensionThetaEntity.cs" />
+    <Compile Include="Entities\OutputPensionBaseEntity.cs" />
+    <Compile Include="Entities\OutputEducationEntity.cs" />
+    <Compile Include="Entities\OutputFertilityEntity.cs" />
+    <Compile Include="Entities\OutputFertilityTotalEntity.cs" />
+    <Compile Include="Entities\OutputStartingIncomeEntity.cs" />
+    <Compile Include="Entities\OutputIncomeIncreaseEntity.cs" />
+    <Compile Include="Entities\OutputSocialGroupEducationTypeEntity.cs" />
+    <Compile Include="Entities\OutputWorkStatusMaxTimeEntity.cs" />
+    <Compile Include="Entities\OutputWorkYearStartEntity.cs" />
+    <Compile Include="Entities\OutputPopulationEntity.cs" />
+    <Compile Include="Entities\OutputMortalityEntity.cs" />
+    <Compile Include="Entities\OutputPensionMultiplierEntity.cs" />
+    <Compile Include="Entities\OutputWorkStatusEntity.cs" />
+    <Compile Include="Entities\OutputWorkStatusMinTimeEntity.cs" />
+    <Compile Include="Entities\OutputPopulationValidationEntity.cs" />
+    <Compile Include="OutputDataSource.cs" />
+    <Compile Include="Parts\DspOutputEducation.cs" />
+    <Compile Include="Parts\DspOutputFertility.cs" />
+    <Compile Include="Parts\DspOutputFertilityTotal.cs" />
+    <Compile Include="Parts\DspOutputIncomeIncrease.cs" />
+    <Compile Include="Parts\DspOutputPensionTheta.cs" />
+    <Compile Include="Parts\DspOutputPensionBase.cs" />
+    <Compile Include="Parts\DspOutputPensionMultiplier.cs" />
+    <Compile Include="Parts\DspOutputPopulationValidation.cs" />
+    <Compile Include="Parts\DspOutputSocialGroupEducationType.cs" />
+    <Compile Include="Parts\DspOutputEconomicGrowth.cs" />
+    <Compile Include="Parts\DspOutputWorkStatusMaxTime.cs" />
+    <Compile Include="Parts\DspOutputWorkStatusMinTime.cs" />
+    <Compile Include="Parts\DspOutputWorkStatus.cs" />
+    <Compile Include="Parts\DspOutputWorkYearStart.cs" />
+    <Compile Include="Parts\DspOutputStartingIncome.cs" />
+    <Compile Include="Parts\DspOutputPopulation.cs" />
+    <Compile Include="Parts\DspOutputMortality.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MicroSim.DataSource.Core\MicroSim.DataSource.Core.csproj">
+      <Project>{6AA5F34F-103D-4EC0-B229-F5B670336313}</Project>
+      <Name>MicroSim.DataSource.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MicroSim.DataSource.DeterministicEducation\MicroSim.DataSource.DeterministicEducation.csproj">
+      <Project>{63a3e770-533e-4c8f-bfc9-ef66f705b19a}</Project>
+      <Name>MicroSim.DataSource.DeterministicEducation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MicroSim.DataSource.Entities\MicroSim.DataSource.Entities.csproj">
+      <Project>{6D68D2F9-E3D0-4899-9915-A40146CEBB9A}</Project>
+      <Name>MicroSim.DataSource.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MicroSim.DataSource.Fertility\MicroSim.DataSource.Fertility.csproj">
+      <Project>{6B3E03D6-96A0-47D1-AC28-F42A40484FBA}</Project>
+      <Name>MicroSim.DataSource.Fertility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MicroSim.DataSource.Mortality\MicroSim.DataSource.Mortality.csproj">
+      <Project>{87BFEA41-F0BA-4732-B352-BF04EED39244}</Project>
+      <Name>MicroSim.DataSource.Mortality</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MicroSim.DataSource.Other\MicroSim.DataSource.Other.csproj">
+      <Project>{b6b457d3-f5c1-4f86-8cae-fce6da4ab03e}</Project>
+      <Name>MicroSim.DataSource.Other</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MicroSim.DataSource.StartingPopulation\MicroSim.DataSource.StartingPopulation.csproj">
+      <Project>{c5ba838a-0ef8-4b3e-9794-629493813ce5}</Project>
+      <Name>MicroSim.DataSource.StartingPopulation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

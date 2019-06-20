@@ -1,0 +1,769 @@
+NuGet package restore started.
+Restoring NuGet packages for solution C:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework.sln.
+NuGet Package restored finished for solution C:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework.sln.
+Restoring NuGet packages for project MicroSimFramework.
+Restoring NuGet packages listed in file c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework\packages.config.
+Skipping NuGet package cef.redist.x64 3.2785.1482 since it is already installed.
+Skipping NuGet package cef.redist.x86 3.2785.1482 since it is already installed.
+Skipping NuGet package CefSharp.Common 53.0.0 since it is already installed.
+Skipping NuGet package CefSharp.WinForms 53.0.0 since it is already installed.
+Skipping NuGet package Newtonsoft.Json 9.0.1 since it is already installed.
+NuGet Package restored finished for project MicroSimFramework.
+Restoring NuGet packages for project MicroSimulation.
+Restoring NuGet packages listed in file c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\packages.config.
+Skipping NuGet package cef.redist.x64 3.2785.1482 since it is already installed.
+Skipping NuGet package cef.redist.x86 3.2785.1482 since it is already installed.
+Skipping NuGet package CefSharp.Common 53.0.0 since it is already installed.
+Skipping NuGet package CefSharp.WinForms 53.0.0 since it is already installed.
+NuGet Package restored finished for project MicroSimulation.
+Restoring NuGet packages for project MicroSimSettings.
+Restoring NuGet packages listed in file c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\packages.config.
+Skipping NuGet package cef.redist.x64 3.2785.1482 since it is already installed.
+Skipping NuGet package cef.redist.x86 3.2785.1482 since it is already installed.
+Skipping NuGet package CefSharp.Common 53.0.0 since it is already installed.
+Skipping NuGet package CefSharp.WinForms 53.0.0 since it is already installed.
+Skipping NuGet package DocumentFormat.OpenXml 2.5 since it is already installed.
+NuGet Package restored finished for project MicroSimSettings.
+Restoring NuGet packages for project MicroSimCodeBuilder.
+Restoring NuGet packages listed in file c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\packages.config.
+Skipping NuGet package cef.redist.x64 3.2785.1482 since it is already installed.
+Skipping NuGet package cef.redist.x86 3.2785.1482 since it is already installed.
+Skipping NuGet package CefSharp.Common 53.0.0 since it is already installed.
+Skipping NuGet package CefSharp.WinForms 53.0.0 since it is already installed.
+Skipping NuGet package Newtonsoft.Json 9.0.1 since it is already installed.
+NuGet Package restored finished for project MicroSimCodeBuilder.
+Restoring NuGet packages for project MicroSimResults.
+Restoring NuGet packages listed in file c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\packages.config.
+Skipping NuGet package cef.redist.x64 3.2785.1482 since it is already installed.
+Skipping NuGet package cef.redist.x86 3.2785.1482 since it is already installed.
+Skipping NuGet package CefSharp.Common 53.0.0 since it is already installed.
+Skipping NuGet package CefSharp.WinForms 53.0.0 since it is already installed.
+NuGet Package restored finished for project MicroSimResults.
+Restoring NuGet packages for project MicroSimulation.Tests.
+Restoring NuGet packages listed in file c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation.Tests\packages.config.
+Skipping NuGet package NUnit 3.5.0 since it is already installed.
+NuGet Package restored finished for project MicroSimulation.Tests.
+All packages are already installed and there is nothing to restore.
+NuGet package restore finished.
+1>------ Build started: Project: MicroSimSettings, Configuration: Debug Any CPU ------
+1>Build started 2017. 05. 21. 12:26:43.
+1>Building with tools version "12.0".
+1>Project file contains ToolsVersion="14.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="12.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=293424.
+1>Target "_CheckForInvalidConfigurationAndPlatform" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (entry point):
+1>Task "Error" skipped, due to false condition; ( '$(_InvalidConfigurationError)' == 'true' ) was evaluated as ( '' == 'true' ).
+1>Task "Warning" skipped, due to false condition; ( '$(_InvalidConfigurationWarning)' == 'true' ) was evaluated as ( '' == 'true' ).
+1>Using "Message" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+1>Task "Message"
+1>  Configuration=Debug
+1>Done executing task "Message".
+1>Task "Message"
+1>  Platform=AnyCPU
+1>Done executing task "Message".
+1>Task "Error" skipped, due to false condition; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) was evaluated as ('bin\Debug\' != '' and !HasTrailingSlash('bin\Debug\')).
+1>Task "Error" skipped, due to false condition; ('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)')) was evaluated as ('obj\' != '' and !HasTrailingSlash('obj\')).
+1>Task "Error" skipped, due to false condition; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) was evaluated as ('obj\Debug\' != '' and !HasTrailingSlash('obj\Debug\')).
+1>Done building target "_CheckForInvalidConfigurationAndPlatform" in project "MicroSimSettings.csproj".
+1>Target "EntityDeploy" skipped, due to false condition; ('@(EntityDeploy)' != '') was evaluated as ('' != '').
+1>Target "BeforeBuild" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (target "Build" depends on it):
+1>Done building target "BeforeBuild" in project "MicroSimSettings.csproj".
+1>Target "BuildOnlySettings" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (target "CoreBuild" depends on it):
+1>Done building target "BuildOnlySettings" in project "MicroSimSettings.csproj".
+1>Target "GetFrameworkPaths" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.NetFramework.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (target "PrepareForBuild" depends on it):
+1>Done building target "GetFrameworkPaths" in project "MicroSimSettings.csproj".
+1>Target "GetWinFXPath" skipped, due to false condition; (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' )) was evaluated as (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' )).
+1>Target "GetReferenceAssemblyPaths" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (target "PrepareForBuild" depends on it):
+1>Using "GetReferenceAssemblyPaths" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+1>Task "GetReferenceAssemblyPaths"
+1>Done executing task "GetReferenceAssemblyPaths".
+1>Done building target "GetReferenceAssemblyPaths" in project "MicroSimSettings.csproj".
+1>Target "AssignLinkMetadata" skipped, due to false condition; ( '$(SynthesizeLinkMetadata)' == 'true' ) was evaluated as ( '' == 'true' ).
+1>Target "EnsureNuGetPackageBuildImports" in project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (target "PrepareForBuild" depends on it):
+1>Task "Error" skipped, due to false condition; (!Exists('..\packages\cef.redist.x64.3.2785.1482\build\cef.redist.x64.targets')) was evaluated as (!Exists('..\packages\cef.redist.x64.3.2785.1482\build\cef.redist.x64.targets')).
+1>Task "Error" skipped, due to false condition; (!Exists('..\packages\cef.redist.x86.3.2785.1482\build\cef.redist.x86.targets')) was evaluated as (!Exists('..\packages\cef.redist.x86.3.2785.1482\build\cef.redist.x86.targets')).
+1>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.props')) was evaluated as (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.props')).
+1>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets')) was evaluated as (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets')).
+1>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.props')) was evaluated as (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.props')).
+1>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.targets')) was evaluated as (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.targets')).
+1>Done building target "EnsureNuGetPackageBuildImports" in project "MicroSimSettings.csproj".
+1>Target "PrepareForBuild" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (target "CoreBuild" depends on it):
+1>Using "FindAppConfigFile" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+1>Task "FindAppConfigFile"
+1>Done executing task "FindAppConfigFile".
+1>Using "MakeDir" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+1>Task "MakeDir"
+1>Done executing task "MakeDir".
+1>Done building target "PrepareForBuild" in project "MicroSimSettings.csproj".
+1>Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
+1>Target "BeforeResolveReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (target "ResolveReferences" depends on it):
+1>Done building target "BeforeResolveReferences" in project "MicroSimSettings.csproj".
+1>Target "AssignProjectConfiguration" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (target "ResolveReferences" depends on it):
+1>Using "AssignProjectConfiguration" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+1>Task "AssignProjectConfiguration"
+1>Done executing task "AssignProjectConfiguration".
+1>Done building target "AssignProjectConfiguration" in project "MicroSimSettings.csproj".
+1>Target "AssignProjectConfiguration" skipped. Previously built successfully.
+1>Target "_SplitProjectReferencesByFileExistence" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (target "ResolveProjectReferences" depends on it):
+1>Task "ResolveNonMSBuildProjectOutput" skipped, due to false condition; ('$(BuildingInsideVisualStudio)'=='true' and '@(ProjectReferenceWithConfiguration)'!='') was evaluated as ('true'=='true' and ''!='').
+1>Done building target "_SplitProjectReferencesByFileExistence" in project "MicroSimSettings.csproj".
+1>Target "ResolveProjectReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (target "ResolveReferences" depends on it):
+1>Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' != '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and ('true' == 'true' or 'true' != 'true') and '12.0' != '10.0' and '' != '').
+1>Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' == '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and ('true' == 'true' or 'true' != 'true') and '12.0' == '10.0' and '' != '').
+1>Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and 'true' != 'true' and 'true' == 'true' and '' != '').
+1>Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingProject)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('' == 'true' and '' != '' and 'true' == 'true' and '' != '').
+1>Task "Warning" skipped, due to false condition; ('@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceNonexistent)' != '') was evaluated as ('' != '' and '' != '').
+1>Done building target "ResolveProjectReferences" in project "MicroSimSettings.csproj".
+1>Target "FindInvalidProjectReferences" skipped, due to false condition; ('$(FindInvalidProjectReferences)' == 'true') was evaluated as ('' == 'true').
+1>Target "ResolveNativeReferences" skipped, due to false condition; ('@(NativeReference)'!='') was evaluated as (''!='').
+1>Target "GetFrameworkPaths" skipped. Previously built successfully.
+1>Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
+1>Target "PrepareForBuild" skipped. Previously built successfully.
+1>Target "GetInstalledSDKLocations" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (target "ResolveSDKReferences" depends on it):
+1>Task "GetInstalledSDKLocations" skipped, due to false condition; ('@(SDKReference)' != '') was evaluated as ('' != '').
+1>Done building target "GetInstalledSDKLocations" in project "MicroSimSettings.csproj".
+1>Target "ResolveSDKReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (target "ResolveAssemblyReferences" depends on it):
+1>Task "ResolveSDKReference" skipped, due to false condition; ('@(SDKReference)'!='') was evaluated as (''!='').
+1>Done building target "ResolveSDKReferences" in project "MicroSimSettings.csproj".
+1>Target "ResolveSDKReferences" skipped. Previously built successfully.
+1>Target "ExpandSDKReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (target "ResolveAssemblyReferences" depends on it):
+1>Task "GetSDKReferenceFiles" skipped, due to false condition; ('@(ResolvedSDKReference)'!='') was evaluated as (''!='').
+1>Done building target "ExpandSDKReferences" in project "MicroSimSettings.csproj".
+1>Target "PlatformCheck" in file "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (target "ResolveAssemblyReferences" depends on it):
+1>Using "Error" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+1>Task "Error"
+1>c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets(4,5): error : CefSharp.Common will work out of the box if you specify platform (x86 / x64). For AnyCPU Support see https://github.com/cefsharp/CefSharp/issues/1714
+1>Done executing task "Error" -- FAILED.
+1>Done building target "PlatformCheck" in project "MicroSimSettings.csproj" -- FAILED.
+1>Target "_CheckForCompileOutputs" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (target "_CleanGetCurrentAndPriorFileWrites" depends on it):
+1>Done building target "_CheckForCompileOutputs" in project "MicroSimSettings.csproj".
+1>Target "_SGenCheckForOutputs" skipped, due to false condition; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) was evaluated as ('Off' == 'On' or (''!='' and 'Off' == 'Auto')).
+1>Target "_CleanGetCurrentAndPriorFileWrites" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (target "_CleanRecordFileWrites" depends on it):
+1>Using "ReadLinesFromFile" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+1>Task "ReadLinesFromFile"
+1>Done executing task "ReadLinesFromFile".
+1>Using "ConvertToAbsolutePath" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+1>Task "ConvertToAbsolutePath"
+1>Done executing task "ConvertToAbsolutePath".
+1>Using "FindUnderPath" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+1>Task "FindUnderPath"
+1>  Comparison path is "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings".
+1>Done executing task "FindUnderPath".
+1>Task "FindUnderPath"
+1>  Comparison path is "bin\Debug\".
+1>Done executing task "FindUnderPath".
+1>Task "FindUnderPath"
+1>  Comparison path is "obj\Debug\".
+1>Done executing task "FindUnderPath".
+1>Using "RemoveDuplicates" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+1>Task "RemoveDuplicates"
+1>Done executing task "RemoveDuplicates".
+1>Done building target "_CleanGetCurrentAndPriorFileWrites" in project "MicroSimSettings.csproj".
+1>Target "_CleanRecordFileWrites" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (target "CoreBuild" depends on it):
+1>Task "RemoveDuplicates"
+1>Done executing task "RemoveDuplicates".
+1>Task "MakeDir"
+1>Done executing task "MakeDir".
+1>Using "WriteLinesToFile" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+1>Task "WriteLinesToFile"
+1>Done executing task "WriteLinesToFile".
+1>Done building target "_CleanRecordFileWrites" in project "MicroSimSettings.csproj".
+1>
+1>Build FAILED.
+1>
+1>Time Elapsed 00:00:00.01
+2>------ Build started: Project: MicroSimulation, Configuration: Debug Any CPU ------
+3>------ Build started: Project: MicroSimResults, Configuration: Debug Any CPU ------
+2>Build started 2017. 05. 21. 12:26:43.
+2>Building with tools version "12.0".
+2>Project file contains ToolsVersion="14.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="12.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=293424.
+2>Target "_CheckForInvalidConfigurationAndPlatform" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (entry point):
+2>Task "Error" skipped, due to false condition; ( '$(_InvalidConfigurationError)' == 'true' ) was evaluated as ( '' == 'true' ).
+2>Task "Warning" skipped, due to false condition; ( '$(_InvalidConfigurationWarning)' == 'true' ) was evaluated as ( '' == 'true' ).
+2>Task "Message"
+2>  Configuration=Debug
+2>Done executing task "Message".
+2>Task "Message"
+2>  Platform=AnyCPU
+2>Done executing task "Message".
+2>Task "Error" skipped, due to false condition; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) was evaluated as ('bin\Debug\' != '' and !HasTrailingSlash('bin\Debug\')).
+2>Task "Error" skipped, due to false condition; ('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)')) was evaluated as ('obj\' != '' and !HasTrailingSlash('obj\')).
+2>Task "Error" skipped, due to false condition; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) was evaluated as ('obj\Debug\' != '' and !HasTrailingSlash('obj\Debug\')).
+2>Done building target "_CheckForInvalidConfigurationAndPlatform" in project "MicroSimulation.csproj".
+2>Target "EntityDeploy" skipped, due to false condition; ('@(EntityDeploy)' != '') was evaluated as ('' != '').
+2>Target "BeforeBuild" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (target "Build" depends on it):
+2>Done building target "BeforeBuild" in project "MicroSimulation.csproj".
+2>Target "BuildOnlySettings" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (target "CoreBuild" depends on it):
+2>Done building target "BuildOnlySettings" in project "MicroSimulation.csproj".
+2>Target "GetFrameworkPaths" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.NetFramework.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (target "PrepareForBuild" depends on it):
+2>Done building target "GetFrameworkPaths" in project "MicroSimulation.csproj".
+2>Target "GetWinFXPath" skipped, due to false condition; (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' )) was evaluated as (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' )).
+2>Target "GetReferenceAssemblyPaths" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (target "PrepareForBuild" depends on it):
+2>Task "GetReferenceAssemblyPaths"
+2>Done executing task "GetReferenceAssemblyPaths".
+2>Done building target "GetReferenceAssemblyPaths" in project "MicroSimulation.csproj".
+2>Target "AssignLinkMetadata" skipped, due to false condition; ( '$(SynthesizeLinkMetadata)' == 'true' ) was evaluated as ( '' == 'true' ).
+2>Target "EnsureNuGetPackageBuildImports" in project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (target "PrepareForBuild" depends on it):
+2>Task "Error" skipped, due to false condition; (!Exists('..\packages\cef.redist.x64.3.2785.1482\build\cef.redist.x64.targets')) was evaluated as (!Exists('..\packages\cef.redist.x64.3.2785.1482\build\cef.redist.x64.targets')).
+2>Task "Error" skipped, due to false condition; (!Exists('..\packages\cef.redist.x86.3.2785.1482\build\cef.redist.x86.targets')) was evaluated as (!Exists('..\packages\cef.redist.x86.3.2785.1482\build\cef.redist.x86.targets')).
+2>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.props')) was evaluated as (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.props')).
+2>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets')) was evaluated as (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets')).
+2>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.props')) was evaluated as (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.props')).
+2>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.targets')) was evaluated as (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.targets')).
+2>Done building target "EnsureNuGetPackageBuildImports" in project "MicroSimulation.csproj".
+2>Target "PrepareForBuild" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (target "CoreBuild" depends on it):
+2>Task "FindAppConfigFile"
+2>Done executing task "FindAppConfigFile".
+2>Task "MakeDir"
+2>Done executing task "MakeDir".
+2>Done building target "PrepareForBuild" in project "MicroSimulation.csproj".
+2>Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
+2>Target "BeforeResolveReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (target "ResolveReferences" depends on it):
+2>Done building target "BeforeResolveReferences" in project "MicroSimulation.csproj".
+2>Target "AssignProjectConfiguration" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (target "ResolveReferences" depends on it):
+2>Task "AssignProjectConfiguration"
+2>  Project reference "..\MicroSimSettings\MicroSimSettings.csproj" has been assigned the "Debug|AnyCPU" configuration.
+2>Done executing task "AssignProjectConfiguration".
+2>Done building target "AssignProjectConfiguration" in project "MicroSimulation.csproj".
+2>Target "AssignProjectConfiguration" skipped. Previously built successfully.
+2>Target "_SplitProjectReferencesByFileExistence" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (target "ResolveProjectReferences" depends on it):
+2>Using "ResolveNonMSBuildProjectOutput" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+2>Task "ResolveNonMSBuildProjectOutput"
+2>  Resolving project reference "..\MicroSimSettings\MicroSimSettings.csproj".
+2>  Project reference "..\MicroSimSettings\MicroSimSettings.csproj" has not been resolved.
+2>Done executing task "ResolveNonMSBuildProjectOutput".
+2>Done building target "_SplitProjectReferencesByFileExistence" in project "MicroSimulation.csproj".
+2>Target "ResolveProjectReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (target "ResolveReferences" depends on it):
+2>Using "MSBuild" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+2>Task "MSBuild"
+2>  Global Properties:
+2>    Configuration=Debug
+2>    Platform=AnyCPU
+2>Building with tools version "12.0".
+2>Project file contains ToolsVersion="14.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="12.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=293424.
+2>Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+2>Target "GetTargetPath" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (entry point):
+2>Done building target "GetTargetPath" in project "MicroSimSettings.csproj".
+2>Done executing task "MSBuild".
+2>Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' == '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('true' == 'true' and '..\MicroSimSettings\MicroSimSettings.csproj' != '' and ('true' == 'true' or 'true' != 'true') and '12.0' == '10.0' and '..\MicroSimSettings\MicroSimSettings.csproj' != '').
+2>Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('true' == 'true' and '..\MicroSimSettings\MicroSimSettings.csproj' != '' and 'true' != 'true' and 'true' == 'true' and '..\MicroSimSettings\MicroSimSettings.csproj' != '').
+2>Task "MSBuild"
+2>  Global Properties:
+2>    Configuration=Debug
+2>    Platform=AnyCPU
+2>Building with tools version "12.0".
+2>Project file contains ToolsVersion="14.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="12.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=293424.
+2>Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+2>Target "GetNativeManifest" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimSettings\MicroSimSettings.csproj" (entry point):
+2>Done building target "GetNativeManifest" in project "MicroSimSettings.csproj".
+2>Done executing task "MSBuild".
+2>Task "Warning" skipped, due to false condition; ('@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceNonexistent)' != '') was evaluated as ('..\MicroSimSettings\MicroSimSettings.csproj' != '' and '' != '').
+2>Done building target "ResolveProjectReferences" in project "MicroSimulation.csproj".
+2>Target "FindInvalidProjectReferences" skipped, due to false condition; ('$(FindInvalidProjectReferences)' == 'true') was evaluated as ('' == 'true').
+2>Target "ResolveNativeReferences" skipped, due to false condition; ('@(NativeReference)'!='') was evaluated as (''!='').
+2>Target "GetFrameworkPaths" skipped. Previously built successfully.
+2>Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
+2>Target "PrepareForBuild" skipped. Previously built successfully.
+2>Target "GetInstalledSDKLocations" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (target "ResolveSDKReferences" depends on it):
+2>Task "GetInstalledSDKLocations" skipped, due to false condition; ('@(SDKReference)' != '') was evaluated as ('' != '').
+2>Done building target "GetInstalledSDKLocations" in project "MicroSimulation.csproj".
+2>Target "ResolveSDKReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (target "ResolveAssemblyReferences" depends on it):
+2>Task "ResolveSDKReference" skipped, due to false condition; ('@(SDKReference)'!='') was evaluated as (''!='').
+2>Done building target "ResolveSDKReferences" in project "MicroSimulation.csproj".
+2>Target "ResolveSDKReferences" skipped. Previously built successfully.
+2>Target "ExpandSDKReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (target "ResolveAssemblyReferences" depends on it):
+2>Task "GetSDKReferenceFiles" skipped, due to false condition; ('@(ResolvedSDKReference)'!='') was evaluated as (''!='').
+2>Done building target "ExpandSDKReferences" in project "MicroSimulation.csproj".
+2>Target "PlatformCheck" in file "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (target "ResolveAssemblyReferences" depends on it):
+2>Task "Error"
+2>c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets(4,5): error : CefSharp.Common will work out of the box if you specify platform (x86 / x64). For AnyCPU Support see https://github.com/cefsharp/CefSharp/issues/1714
+2>Done executing task "Error" -- FAILED.
+2>Done building target "PlatformCheck" in project "MicroSimulation.csproj" -- FAILED.
+2>Target "_CheckForCompileOutputs" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (target "_CleanGetCurrentAndPriorFileWrites" depends on it):
+2>Done building target "_CheckForCompileOutputs" in project "MicroSimulation.csproj".
+2>Target "_SGenCheckForOutputs" skipped, due to false condition; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) was evaluated as ('Off' == 'On' or (''!='' and 'Off' == 'Auto')).
+2>Target "_CleanGetCurrentAndPriorFileWrites" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (target "_CleanRecordFileWrites" depends on it):
+2>Task "ReadLinesFromFile"
+2>Done executing task "ReadLinesFromFile".
+2>Task "ConvertToAbsolutePath"
+2>Done executing task "ConvertToAbsolutePath".
+2>Task "FindUnderPath"
+2>  Comparison path is "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation".
+2>Done executing task "FindUnderPath".
+2>Task "FindUnderPath"
+2>  Comparison path is "bin\Debug\".
+2>Done executing task "FindUnderPath".
+2>Task "FindUnderPath"
+2>  Comparison path is "obj\Debug\".
+2>Done executing task "FindUnderPath".
+2>Task "RemoveDuplicates"
+2>Done executing task "RemoveDuplicates".
+2>Done building target "_CleanGetCurrentAndPriorFileWrites" in project "MicroSimulation.csproj".
+2>Target "_CleanRecordFileWrites" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (target "CoreBuild" depends on it):
+2>Task "RemoveDuplicates"
+2>Done executing task "RemoveDuplicates".
+2>Task "MakeDir"
+2>Done executing task "MakeDir".
+2>Task "WriteLinesToFile"
+2>Done executing task "WriteLinesToFile".
+2>Done building target "_CleanRecordFileWrites" in project "MicroSimulation.csproj".
+2>
+2>Build FAILED.
+2>
+2>Time Elapsed 00:00:00.09
+3>Build started 2017. 05. 21. 12:26:43.
+3>Building with tools version "12.0".
+3>Project file contains ToolsVersion="14.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="12.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=293424.
+3>Target "_CheckForInvalidConfigurationAndPlatform" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (entry point):
+3>Task "Error" skipped, due to false condition; ( '$(_InvalidConfigurationError)' == 'true' ) was evaluated as ( '' == 'true' ).
+3>Task "Warning" skipped, due to false condition; ( '$(_InvalidConfigurationWarning)' == 'true' ) was evaluated as ( '' == 'true' ).
+3>Using "Message" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+3>Task "Message"
+3>  Configuration=Debug
+3>Done executing task "Message".
+3>Task "Message"
+3>  Platform=AnyCPU
+3>Done executing task "Message".
+3>Task "Error" skipped, due to false condition; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) was evaluated as ('bin\Debug\' != '' and !HasTrailingSlash('bin\Debug\')).
+3>Task "Error" skipped, due to false condition; ('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)')) was evaluated as ('obj\' != '' and !HasTrailingSlash('obj\')).
+3>Task "Error" skipped, due to false condition; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) was evaluated as ('obj\Debug\' != '' and !HasTrailingSlash('obj\Debug\')).
+3>Done building target "_CheckForInvalidConfigurationAndPlatform" in project "MicroSimResults.csproj".
+3>Target "EntityDeploy" skipped, due to false condition; ('@(EntityDeploy)' != '') was evaluated as ('' != '').
+3>Target "BeforeBuild" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (target "Build" depends on it):
+3>Done building target "BeforeBuild" in project "MicroSimResults.csproj".
+3>Target "BuildOnlySettings" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (target "CoreBuild" depends on it):
+3>Done building target "BuildOnlySettings" in project "MicroSimResults.csproj".
+3>Target "GetFrameworkPaths" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.NetFramework.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (target "PrepareForBuild" depends on it):
+3>Done building target "GetFrameworkPaths" in project "MicroSimResults.csproj".
+3>Target "GetWinFXPath" skipped, due to false condition; (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' )) was evaluated as (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' )).
+3>Target "GetReferenceAssemblyPaths" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (target "PrepareForBuild" depends on it):
+3>Using "GetReferenceAssemblyPaths" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+3>Task "GetReferenceAssemblyPaths"
+3>Done executing task "GetReferenceAssemblyPaths".
+3>Done building target "GetReferenceAssemblyPaths" in project "MicroSimResults.csproj".
+3>Target "AssignLinkMetadata" skipped, due to false condition; ( '$(SynthesizeLinkMetadata)' == 'true' ) was evaluated as ( '' == 'true' ).
+3>Target "EnsureNuGetPackageBuildImports" in project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (target "PrepareForBuild" depends on it):
+3>Task "Error" skipped, due to false condition; (!Exists('..\packages\cef.redist.x64.3.2785.1482\build\cef.redist.x64.targets')) was evaluated as (!Exists('..\packages\cef.redist.x64.3.2785.1482\build\cef.redist.x64.targets')).
+3>Task "Error" skipped, due to false condition; (!Exists('..\packages\cef.redist.x86.3.2785.1482\build\cef.redist.x86.targets')) was evaluated as (!Exists('..\packages\cef.redist.x86.3.2785.1482\build\cef.redist.x86.targets')).
+3>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.props')) was evaluated as (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.props')).
+3>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets')) was evaluated as (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets')).
+3>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.props')) was evaluated as (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.props')).
+3>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.targets')) was evaluated as (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.targets')).
+3>Done building target "EnsureNuGetPackageBuildImports" in project "MicroSimResults.csproj".
+3>Target "PrepareForBuild" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (target "CoreBuild" depends on it):
+3>Using "FindAppConfigFile" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+3>Task "FindAppConfigFile"
+3>Done executing task "FindAppConfigFile".
+3>Using "MakeDir" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+3>Task "MakeDir"
+3>Done executing task "MakeDir".
+3>Done building target "PrepareForBuild" in project "MicroSimResults.csproj".
+3>Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
+3>Target "BeforeResolveReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (target "ResolveReferences" depends on it):
+3>Done building target "BeforeResolveReferences" in project "MicroSimResults.csproj".
+3>Target "AssignProjectConfiguration" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (target "ResolveReferences" depends on it):
+3>Using "AssignProjectConfiguration" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+3>Task "AssignProjectConfiguration"
+3>  Project reference "..\MicroSimSettings\MicroSimSettings.csproj" has been assigned the "Debug|AnyCPU" configuration.
+3>Done executing task "AssignProjectConfiguration".
+3>Done building target "AssignProjectConfiguration" in project "MicroSimResults.csproj".
+3>Target "AssignProjectConfiguration" skipped. Previously built successfully.
+3>Target "_SplitProjectReferencesByFileExistence" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (target "ResolveProjectReferences" depends on it):
+3>Using "ResolveNonMSBuildProjectOutput" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+3>Task "ResolveNonMSBuildProjectOutput"
+3>  Resolving project reference "..\MicroSimSettings\MicroSimSettings.csproj".
+3>  Project reference "..\MicroSimSettings\MicroSimSettings.csproj" has not been resolved.
+3>Done executing task "ResolveNonMSBuildProjectOutput".
+3>Done building target "_SplitProjectReferencesByFileExistence" in project "MicroSimResults.csproj".
+3>Target "ResolveProjectReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (target "ResolveReferences" depends on it):
+3>Using "MSBuild" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+3>Task "MSBuild"
+3>  Global Properties:
+3>    Configuration=Debug
+3>    Platform=AnyCPU
+3>Building with tools version "12.0".
+3>Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+3>Target "GetTargetPath" skipped. Previously built successfully.
+3>Done executing task "MSBuild".
+3>Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' == '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('true' == 'true' and '..\MicroSimSettings\MicroSimSettings.csproj' != '' and ('true' == 'true' or 'true' != 'true') and '12.0' == '10.0' and '..\MicroSimSettings\MicroSimSettings.csproj' != '').
+3>Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('true' == 'true' and '..\MicroSimSettings\MicroSimSettings.csproj' != '' and 'true' != 'true' and 'true' == 'true' and '..\MicroSimSettings\MicroSimSettings.csproj' != '').
+3>Task "MSBuild"
+3>  Global Properties:
+3>    Configuration=Debug
+3>    Platform=AnyCPU
+3>Building with tools version "12.0".
+3>Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+3>Target "GetNativeManifest" skipped. Previously built successfully.
+3>Done executing task "MSBuild".
+3>Task "Warning" skipped, due to false condition; ('@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceNonexistent)' != '') was evaluated as ('..\MicroSimSettings\MicroSimSettings.csproj' != '' and '' != '').
+3>Done building target "ResolveProjectReferences" in project "MicroSimResults.csproj".
+3>Target "FindInvalidProjectReferences" skipped, due to false condition; ('$(FindInvalidProjectReferences)' == 'true') was evaluated as ('' == 'true').
+3>Target "ResolveNativeReferences" skipped, due to false condition; ('@(NativeReference)'!='') was evaluated as (''!='').
+3>Target "GetFrameworkPaths" skipped. Previously built successfully.
+3>Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
+3>Target "PrepareForBuild" skipped. Previously built successfully.
+3>Target "GetInstalledSDKLocations" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (target "ResolveSDKReferences" depends on it):
+3>Task "GetInstalledSDKLocations" skipped, due to false condition; ('@(SDKReference)' != '') was evaluated as ('' != '').
+3>Done building target "GetInstalledSDKLocations" in project "MicroSimResults.csproj".
+3>Target "ResolveSDKReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (target "ResolveAssemblyReferences" depends on it):
+3>Task "ResolveSDKReference" skipped, due to false condition; ('@(SDKReference)'!='') was evaluated as (''!='').
+3>Done building target "ResolveSDKReferences" in project "MicroSimResults.csproj".
+3>Target "ResolveSDKReferences" skipped. Previously built successfully.
+3>Target "ExpandSDKReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (target "ResolveAssemblyReferences" depends on it):
+3>Task "GetSDKReferenceFiles" skipped, due to false condition; ('@(ResolvedSDKReference)'!='') was evaluated as (''!='').
+3>Done building target "ExpandSDKReferences" in project "MicroSimResults.csproj".
+3>Target "PlatformCheck" in file "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (target "ResolveAssemblyReferences" depends on it):
+3>Using "Error" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+3>Task "Error"
+3>c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets(4,5): error : CefSharp.Common will work out of the box if you specify platform (x86 / x64). For AnyCPU Support see https://github.com/cefsharp/CefSharp/issues/1714
+3>Done executing task "Error" -- FAILED.
+3>Done building target "PlatformCheck" in project "MicroSimResults.csproj" -- FAILED.
+3>Target "_CheckForCompileOutputs" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (target "_CleanGetCurrentAndPriorFileWrites" depends on it):
+3>Done building target "_CheckForCompileOutputs" in project "MicroSimResults.csproj".
+3>Target "_SGenCheckForOutputs" skipped, due to false condition; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) was evaluated as ('Off' == 'On' or (''!='' and 'Off' == 'Auto')).
+3>Target "_CleanGetCurrentAndPriorFileWrites" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (target "_CleanRecordFileWrites" depends on it):
+3>Using "ReadLinesFromFile" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+3>Task "ReadLinesFromFile"
+3>Done executing task "ReadLinesFromFile".
+3>Using "ConvertToAbsolutePath" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+3>Task "ConvertToAbsolutePath"
+3>Done executing task "ConvertToAbsolutePath".
+3>Using "FindUnderPath" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+3>Task "FindUnderPath"
+3>  Comparison path is "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults".
+3>Done executing task "FindUnderPath".
+3>Task "FindUnderPath"
+3>  Comparison path is "bin\Debug\".
+3>Done executing task "FindUnderPath".
+3>Task "FindUnderPath"
+3>  Comparison path is "obj\Debug\".
+3>Done executing task "FindUnderPath".
+3>Using "RemoveDuplicates" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+3>Task "RemoveDuplicates"
+3>Done executing task "RemoveDuplicates".
+3>Done building target "_CleanGetCurrentAndPriorFileWrites" in project "MicroSimResults.csproj".
+3>Target "_CleanRecordFileWrites" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (target "CoreBuild" depends on it):
+3>Task "RemoveDuplicates"
+3>Done executing task "RemoveDuplicates".
+3>Task "MakeDir"
+3>Done executing task "MakeDir".
+3>Using "WriteLinesToFile" task from assembly "Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+3>Task "WriteLinesToFile"
+3>Done executing task "WriteLinesToFile".
+3>Done building target "_CleanRecordFileWrites" in project "MicroSimResults.csproj".
+3>
+3>Build FAILED.
+3>
+3>Time Elapsed 00:00:00.03
+4>------ Build started: Project: MicroSimCodeBuilder, Configuration: Debug Any CPU ------
+4>Build started 2017. 05. 21. 12:26:43.
+4>Building with tools version "12.0".
+4>Project file contains ToolsVersion="14.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="12.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=293424.
+4>Target "_CheckForInvalidConfigurationAndPlatform" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (entry point):
+4>Task "Error" skipped, due to false condition; ( '$(_InvalidConfigurationError)' == 'true' ) was evaluated as ( '' == 'true' ).
+4>Task "Warning" skipped, due to false condition; ( '$(_InvalidConfigurationWarning)' == 'true' ) was evaluated as ( '' == 'true' ).
+4>Task "Message"
+4>  Configuration=Debug
+4>Done executing task "Message".
+4>Task "Message"
+4>  Platform=AnyCPU
+4>Done executing task "Message".
+4>Task "Error" skipped, due to false condition; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) was evaluated as ('bin\Debug\' != '' and !HasTrailingSlash('bin\Debug\')).
+4>Task "Error" skipped, due to false condition; ('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)')) was evaluated as ('obj\' != '' and !HasTrailingSlash('obj\')).
+4>Task "Error" skipped, due to false condition; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) was evaluated as ('obj\Debug\' != '' and !HasTrailingSlash('obj\Debug\')).
+4>Done building target "_CheckForInvalidConfigurationAndPlatform" in project "MicroSimCodeBuilder.csproj".
+4>Target "EntityDeploy" skipped, due to false condition; ('@(EntityDeploy)' != '') was evaluated as ('' != '').
+4>Target "BeforeBuild" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (target "Build" depends on it):
+4>Done building target "BeforeBuild" in project "MicroSimCodeBuilder.csproj".
+4>Target "BuildOnlySettings" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (target "CoreBuild" depends on it):
+4>Done building target "BuildOnlySettings" in project "MicroSimCodeBuilder.csproj".
+4>Target "GetFrameworkPaths" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.NetFramework.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (target "PrepareForBuild" depends on it):
+4>Done building target "GetFrameworkPaths" in project "MicroSimCodeBuilder.csproj".
+4>Target "GetWinFXPath" skipped, due to false condition; (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' )) was evaluated as (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' )).
+4>Target "GetReferenceAssemblyPaths" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (target "PrepareForBuild" depends on it):
+4>Task "GetReferenceAssemblyPaths"
+4>Done executing task "GetReferenceAssemblyPaths".
+4>Done building target "GetReferenceAssemblyPaths" in project "MicroSimCodeBuilder.csproj".
+4>Target "AssignLinkMetadata" skipped, due to false condition; ( '$(SynthesizeLinkMetadata)' == 'true' ) was evaluated as ( '' == 'true' ).
+4>Target "EnsureNuGetPackageBuildImports" in project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (target "PrepareForBuild" depends on it):
+4>Task "Error" skipped, due to false condition; (!Exists('..\packages\cef.redist.x64.3.2785.1482\build\cef.redist.x64.targets')) was evaluated as (!Exists('..\packages\cef.redist.x64.3.2785.1482\build\cef.redist.x64.targets')).
+4>Task "Error" skipped, due to false condition; (!Exists('..\packages\cef.redist.x86.3.2785.1482\build\cef.redist.x86.targets')) was evaluated as (!Exists('..\packages\cef.redist.x86.3.2785.1482\build\cef.redist.x86.targets')).
+4>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.props')) was evaluated as (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.props')).
+4>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets')) was evaluated as (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets')).
+4>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.props')) was evaluated as (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.props')).
+4>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.targets')) was evaluated as (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.targets')).
+4>Done building target "EnsureNuGetPackageBuildImports" in project "MicroSimCodeBuilder.csproj".
+4>Target "PrepareForBuild" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (target "CoreBuild" depends on it):
+4>Task "FindAppConfigFile"
+4>Done executing task "FindAppConfigFile".
+4>Task "MakeDir"
+4>Done executing task "MakeDir".
+4>Done building target "PrepareForBuild" in project "MicroSimCodeBuilder.csproj".
+4>Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
+4>Target "BeforeResolveReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (target "ResolveReferences" depends on it):
+4>Done building target "BeforeResolveReferences" in project "MicroSimCodeBuilder.csproj".
+4>Target "AssignProjectConfiguration" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (target "ResolveReferences" depends on it):
+4>Task "AssignProjectConfiguration"
+4>  Project reference "..\MicroSimSettings\MicroSimSettings.csproj" has been assigned the "Debug|AnyCPU" configuration.
+4>  Project reference "..\MicroSimulation\MicroSimulation.csproj" has been assigned the "Debug|AnyCPU" configuration.
+4>Done executing task "AssignProjectConfiguration".
+4>Done building target "AssignProjectConfiguration" in project "MicroSimCodeBuilder.csproj".
+4>Target "AssignProjectConfiguration" skipped. Previously built successfully.
+4>Target "_SplitProjectReferencesByFileExistence" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (target "ResolveProjectReferences" depends on it):
+4>Task "ResolveNonMSBuildProjectOutput"
+4>  Resolving project reference "..\MicroSimSettings\MicroSimSettings.csproj".
+4>  Project reference "..\MicroSimSettings\MicroSimSettings.csproj" has not been resolved.
+4>  Resolving project reference "..\MicroSimulation\MicroSimulation.csproj".
+4>  Project reference "..\MicroSimulation\MicroSimulation.csproj" has not been resolved.
+4>Done executing task "ResolveNonMSBuildProjectOutput".
+4>Done building target "_SplitProjectReferencesByFileExistence" in project "MicroSimCodeBuilder.csproj".
+4>Target "ResolveProjectReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (target "ResolveReferences" depends on it):
+4>Task "MSBuild"
+4>  Global Properties:
+4>    Configuration=Debug
+4>    Platform=AnyCPU
+4>Building with tools version "12.0".
+4>Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+4>Target "GetTargetPath" skipped. Previously built successfully.
+4>Building with tools version "12.0".
+4>Project file contains ToolsVersion="14.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="12.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=293424.
+4>Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+4>Target "GetTargetPath" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (entry point):
+4>Done building target "GetTargetPath" in project "MicroSimulation.csproj".
+4>Done executing task "MSBuild".
+4>Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' == '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('true' == 'true' and '..\MicroSimSettings\MicroSimSettings.csproj;..\MicroSimulation\MicroSimulation.csproj' != '' and ('true' == 'true' or 'true' != 'true') and '12.0' == '10.0' and '..\MicroSimSettings\MicroSimSettings.csproj;..\MicroSimulation\MicroSimulation.csproj' != '').
+4>Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('true' == 'true' and '..\MicroSimSettings\MicroSimSettings.csproj;..\MicroSimulation\MicroSimulation.csproj' != '' and 'true' != 'true' and 'true' == 'true' and '..\MicroSimSettings\MicroSimSettings.csproj;..\MicroSimulation\MicroSimulation.csproj' != '').
+4>Task "MSBuild"
+4>  Global Properties:
+4>    Configuration=Debug
+4>    Platform=AnyCPU
+4>Building with tools version "12.0".
+4>Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+4>Target "GetNativeManifest" skipped. Previously built successfully.
+4>Building with tools version "12.0".
+4>Project file contains ToolsVersion="14.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="12.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=293424.
+4>Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+4>Target "GetNativeManifest" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimulation\MicroSimulation.csproj" (entry point):
+4>Done building target "GetNativeManifest" in project "MicroSimulation.csproj".
+4>Done executing task "MSBuild".
+4>Task "Warning" skipped, due to false condition; ('@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceNonexistent)' != '') was evaluated as ('..\MicroSimSettings\MicroSimSettings.csproj;..\MicroSimulation\MicroSimulation.csproj' != '' and '' != '').
+4>Done building target "ResolveProjectReferences" in project "MicroSimCodeBuilder.csproj".
+4>Target "FindInvalidProjectReferences" skipped, due to false condition; ('$(FindInvalidProjectReferences)' == 'true') was evaluated as ('' == 'true').
+4>Target "ResolveNativeReferences" skipped, due to false condition; ('@(NativeReference)'!='') was evaluated as (''!='').
+4>Target "GetFrameworkPaths" skipped. Previously built successfully.
+4>Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
+4>Target "PrepareForBuild" skipped. Previously built successfully.
+4>Target "GetInstalledSDKLocations" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (target "ResolveSDKReferences" depends on it):
+4>Task "GetInstalledSDKLocations" skipped, due to false condition; ('@(SDKReference)' != '') was evaluated as ('' != '').
+4>Done building target "GetInstalledSDKLocations" in project "MicroSimCodeBuilder.csproj".
+4>Target "ResolveSDKReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (target "ResolveAssemblyReferences" depends on it):
+4>Task "ResolveSDKReference" skipped, due to false condition; ('@(SDKReference)'!='') was evaluated as (''!='').
+4>Done building target "ResolveSDKReferences" in project "MicroSimCodeBuilder.csproj".
+4>Target "ResolveSDKReferences" skipped. Previously built successfully.
+4>Target "ExpandSDKReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (target "ResolveAssemblyReferences" depends on it):
+4>Task "GetSDKReferenceFiles" skipped, due to false condition; ('@(ResolvedSDKReference)'!='') was evaluated as (''!='').
+4>Done building target "ExpandSDKReferences" in project "MicroSimCodeBuilder.csproj".
+4>Target "PlatformCheck" in file "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (target "ResolveAssemblyReferences" depends on it):
+4>Task "Error"
+4>c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets(4,5): error : CefSharp.Common will work out of the box if you specify platform (x86 / x64). For AnyCPU Support see https://github.com/cefsharp/CefSharp/issues/1714
+4>Done executing task "Error" -- FAILED.
+4>Done building target "PlatformCheck" in project "MicroSimCodeBuilder.csproj" -- FAILED.
+4>Target "_CheckForCompileOutputs" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (target "_CleanGetCurrentAndPriorFileWrites" depends on it):
+4>Done building target "_CheckForCompileOutputs" in project "MicroSimCodeBuilder.csproj".
+4>Target "_SGenCheckForOutputs" skipped, due to false condition; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) was evaluated as ('Off' == 'On' or (''!='' and 'Off' == 'Auto')).
+4>Target "_CleanGetCurrentAndPriorFileWrites" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (target "_CleanRecordFileWrites" depends on it):
+4>Task "ReadLinesFromFile"
+4>Done executing task "ReadLinesFromFile".
+4>Task "ConvertToAbsolutePath"
+4>Done executing task "ConvertToAbsolutePath".
+4>Task "FindUnderPath"
+4>  Comparison path is "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder".
+4>Done executing task "FindUnderPath".
+4>Task "FindUnderPath"
+4>  Comparison path is "bin\Debug\".
+4>Done executing task "FindUnderPath".
+4>Task "FindUnderPath"
+4>  Comparison path is "obj\Debug\".
+4>Done executing task "FindUnderPath".
+4>Task "RemoveDuplicates"
+4>Done executing task "RemoveDuplicates".
+4>Done building target "_CleanGetCurrentAndPriorFileWrites" in project "MicroSimCodeBuilder.csproj".
+4>Target "_CleanRecordFileWrites" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (target "CoreBuild" depends on it):
+4>Task "RemoveDuplicates"
+4>Done executing task "RemoveDuplicates".
+4>Task "MakeDir"
+4>Done executing task "MakeDir".
+4>Task "WriteLinesToFile"
+4>Done executing task "WriteLinesToFile".
+4>Done building target "_CleanRecordFileWrites" in project "MicroSimCodeBuilder.csproj".
+4>
+4>Build FAILED.
+4>
+4>Time Elapsed 00:00:00.03
+5>------ Build started: Project: MicroSimFramework, Configuration: Debug Any CPU ------
+5>Build started 2017. 05. 21. 12:26:43.
+5>Building with tools version "12.0".
+5>Project file contains ToolsVersion="14.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="12.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=293424.
+5>Target "_CheckForInvalidConfigurationAndPlatform" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework\MicroSimFramework.csproj" (entry point):
+5>Task "Error" skipped, due to false condition; ( '$(_InvalidConfigurationError)' == 'true' ) was evaluated as ( '' == 'true' ).
+5>Task "Warning" skipped, due to false condition; ( '$(_InvalidConfigurationWarning)' == 'true' ) was evaluated as ( '' == 'true' ).
+5>Task "Message"
+5>  Configuration=Debug
+5>Done executing task "Message".
+5>Task "Message"
+5>  Platform=AnyCPU
+5>Done executing task "Message".
+5>Task "Error" skipped, due to false condition; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) was evaluated as ('bin\Debug\' != '' and !HasTrailingSlash('bin\Debug\')).
+5>Task "Error" skipped, due to false condition; ('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)')) was evaluated as ('obj\' != '' and !HasTrailingSlash('obj\')).
+5>Task "Error" skipped, due to false condition; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) was evaluated as ('obj\Debug\' != '' and !HasTrailingSlash('obj\Debug\')).
+5>Done building target "_CheckForInvalidConfigurationAndPlatform" in project "MicroSimFramework.csproj".
+5>Target "EntityDeploy" skipped, due to false condition; ('@(EntityDeploy)' != '') was evaluated as ('' != '').
+5>Target "BeforeBuild" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework\MicroSimFramework.csproj" (target "Build" depends on it):
+5>Done building target "BeforeBuild" in project "MicroSimFramework.csproj".
+5>Target "BuildOnlySettings" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework\MicroSimFramework.csproj" (target "CoreBuild" depends on it):
+5>Done building target "BuildOnlySettings" in project "MicroSimFramework.csproj".
+5>Target "GetFrameworkPaths" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.NetFramework.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework\MicroSimFramework.csproj" (target "PrepareForBuild" depends on it):
+5>Done building target "GetFrameworkPaths" in project "MicroSimFramework.csproj".
+5>Target "GetWinFXPath" skipped, due to false condition; (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' )) was evaluated as (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' )).
+5>Target "GetReferenceAssemblyPaths" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework\MicroSimFramework.csproj" (target "PrepareForBuild" depends on it):
+5>Task "GetReferenceAssemblyPaths"
+5>Done executing task "GetReferenceAssemblyPaths".
+5>Done building target "GetReferenceAssemblyPaths" in project "MicroSimFramework.csproj".
+5>Target "AssignLinkMetadata" skipped, due to false condition; ( '$(SynthesizeLinkMetadata)' == 'true' ) was evaluated as ( '' == 'true' ).
+5>Target "EnsureNuGetPackageBuildImports" in project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework\MicroSimFramework.csproj" (target "PrepareForBuild" depends on it):
+5>Task "Error" skipped, due to false condition; (!Exists('..\packages\cef.redist.x64.3.2785.1482\build\cef.redist.x64.targets')) was evaluated as (!Exists('..\packages\cef.redist.x64.3.2785.1482\build\cef.redist.x64.targets')).
+5>Task "Error" skipped, due to false condition; (!Exists('..\packages\cef.redist.x86.3.2785.1482\build\cef.redist.x86.targets')) was evaluated as (!Exists('..\packages\cef.redist.x86.3.2785.1482\build\cef.redist.x86.targets')).
+5>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.props')) was evaluated as (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.props')).
+5>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets')) was evaluated as (!Exists('..\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets')).
+5>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.props')) was evaluated as (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.props')).
+5>Task "Error" skipped, due to false condition; (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.targets')) was evaluated as (!Exists('..\packages\CefSharp.WinForms.53.0.0\build\CefSharp.WinForms.targets')).
+5>Done building target "EnsureNuGetPackageBuildImports" in project "MicroSimFramework.csproj".
+5>Target "PrepareForBuild" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework\MicroSimFramework.csproj" (target "CoreBuild" depends on it):
+5>Task "FindAppConfigFile"
+5>  Found "App.config".
+5>Done executing task "FindAppConfigFile".
+5>Task "MakeDir"
+5>Done executing task "MakeDir".
+5>Done building target "PrepareForBuild" in project "MicroSimFramework.csproj".
+5>Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
+5>Target "BeforeResolveReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework\MicroSimFramework.csproj" (target "ResolveReferences" depends on it):
+5>Done building target "BeforeResolveReferences" in project "MicroSimFramework.csproj".
+5>Target "AssignProjectConfiguration" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework\MicroSimFramework.csproj" (target "ResolveReferences" depends on it):
+5>Task "AssignProjectConfiguration"
+5>  Project reference "..\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" has been assigned the "Debug|AnyCPU" configuration.
+5>  Project reference "..\MicroSimResults\MicroSimResults.csproj" has been assigned the "Debug|AnyCPU" configuration.
+5>  Project reference "..\MicroSimSettings\MicroSimSettings.csproj" has been assigned the "Debug|AnyCPU" configuration.
+5>  Project reference "..\MicroSimulation\MicroSimulation.csproj" has been assigned the "Debug|AnyCPU" configuration.
+5>Done executing task "AssignProjectConfiguration".
+5>Done building target "AssignProjectConfiguration" in project "MicroSimFramework.csproj".
+5>Target "AssignProjectConfiguration" skipped. Previously built successfully.
+5>Target "_SplitProjectReferencesByFileExistence" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework\MicroSimFramework.csproj" (target "ResolveProjectReferences" depends on it):
+5>Task "ResolveNonMSBuildProjectOutput"
+5>  Resolving project reference "..\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj".
+5>  Project reference "..\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" has not been resolved.
+5>  Resolving project reference "..\MicroSimResults\MicroSimResults.csproj".
+5>  Project reference "..\MicroSimResults\MicroSimResults.csproj" has not been resolved.
+5>  Resolving project reference "..\MicroSimSettings\MicroSimSettings.csproj".
+5>  Project reference "..\MicroSimSettings\MicroSimSettings.csproj" has not been resolved.
+5>  Resolving project reference "..\MicroSimulation\MicroSimulation.csproj".
+5>  Project reference "..\MicroSimulation\MicroSimulation.csproj" has not been resolved.
+5>Done executing task "ResolveNonMSBuildProjectOutput".
+5>Done building target "_SplitProjectReferencesByFileExistence" in project "MicroSimFramework.csproj".
+5>Target "ResolveProjectReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework\MicroSimFramework.csproj" (target "ResolveReferences" depends on it):
+5>Task "MSBuild"
+5>  Global Properties:
+5>    Configuration=Debug
+5>    Platform=AnyCPU
+5>Building with tools version "12.0".
+5>Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+5>Target "GetTargetPath" skipped. Previously built successfully.
+5>Building with tools version "12.0".
+5>Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+5>Target "GetTargetPath" skipped. Previously built successfully.
+5>Building with tools version "12.0".
+5>Project file contains ToolsVersion="14.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="12.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=293424.
+5>Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+5>Target "GetTargetPath" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (entry point):
+5>Done building target "GetTargetPath" in project "MicroSimCodeBuilder.csproj".
+5>Building with tools version "12.0".
+5>Project file contains ToolsVersion="14.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="12.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=293424.
+5>Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+5>Target "GetTargetPath" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (entry point):
+5>Done building target "GetTargetPath" in project "MicroSimResults.csproj".
+5>Done executing task "MSBuild".
+5>Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' == '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('true' == 'true' and '..\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj;..\MicroSimResults\MicroSimResults.csproj;..\MicroSimSettings\MicroSimSettings.csproj;..\MicroSimulation\MicroSimulation.csproj' != '' and ('true' == 'true' or 'true' != 'true') and '12.0' == '10.0' and '..\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj;..\MicroSimResults\MicroSimResults.csproj;..\MicroSimSettings\MicroSimSettings.csproj;..\MicroSimulation\MicroSimulation.csproj' != '').
+5>Task "MSBuild" skipped, due to false condition; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') was evaluated as ('true' == 'true' and '..\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj;..\MicroSimResults\MicroSimResults.csproj;..\MicroSimSettings\MicroSimSettings.csproj;..\MicroSimulation\MicroSimulation.csproj' != '' and 'true' != 'true' and 'true' == 'true' and '..\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj;..\MicroSimResults\MicroSimResults.csproj;..\MicroSimSettings\MicroSimSettings.csproj;..\MicroSimulation\MicroSimulation.csproj' != '').
+5>Task "MSBuild"
+5>  Global Properties:
+5>    Configuration=Debug
+5>    Platform=AnyCPU
+5>Building with tools version "12.0".
+5>Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+5>Target "GetNativeManifest" skipped. Previously built successfully.
+5>Building with tools version "12.0".
+5>Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+5>Target "GetNativeManifest" skipped. Previously built successfully.
+5>Building with tools version "12.0".
+5>Project file contains ToolsVersion="14.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="12.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=293424.
+5>Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+5>Target "GetNativeManifest" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj" (entry point):
+5>Done building target "GetNativeManifest" in project "MicroSimCodeBuilder.csproj".
+5>Building with tools version "12.0".
+5>Project file contains ToolsVersion="14.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="12.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=293424.
+5>Target "_CheckForInvalidConfigurationAndPlatform" skipped. Previously built successfully.
+5>Target "GetNativeManifest" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimResults\MicroSimResults.csproj" (entry point):
+5>Done building target "GetNativeManifest" in project "MicroSimResults.csproj".
+5>Done executing task "MSBuild".
+5>Task "Warning" skipped, due to false condition; ('@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceNonexistent)' != '') was evaluated as ('..\MicroSimCodeBuilder\MicroSimCodeBuilder.csproj;..\MicroSimResults\MicroSimResults.csproj;..\MicroSimSettings\MicroSimSettings.csproj;..\MicroSimulation\MicroSimulation.csproj' != '' and '' != '').
+5>Done building target "ResolveProjectReferences" in project "MicroSimFramework.csproj".
+5>Target "FindInvalidProjectReferences" skipped, due to false condition; ('$(FindInvalidProjectReferences)' == 'true') was evaluated as ('' == 'true').
+5>Target "ResolveNativeReferences" skipped, due to false condition; ('@(NativeReference)'!='') was evaluated as (''!='').
+5>Target "GetFrameworkPaths" skipped. Previously built successfully.
+5>Target "GetReferenceAssemblyPaths" skipped. Previously built successfully.
+5>Target "PrepareForBuild" skipped. Previously built successfully.
+5>Target "GetInstalledSDKLocations" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework\MicroSimFramework.csproj" (target "ResolveSDKReferences" depends on it):
+5>Task "GetInstalledSDKLocations" skipped, due to false condition; ('@(SDKReference)' != '') was evaluated as ('' != '').
+5>Done building target "GetInstalledSDKLocations" in project "MicroSimFramework.csproj".
+5>Target "ResolveSDKReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework\MicroSimFramework.csproj" (target "ResolveAssemblyReferences" depends on it):
+5>Task "ResolveSDKReference" skipped, due to false condition; ('@(SDKReference)'!='') was evaluated as (''!='').
+5>Done building target "ResolveSDKReferences" in project "MicroSimFramework.csproj".
+5>Target "ResolveSDKReferences" skipped. Previously built successfully.
+5>Target "ExpandSDKReferences" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework\MicroSimFramework.csproj" (target "ResolveAssemblyReferences" depends on it):
+5>Task "GetSDKReferenceFiles" skipped, due to false condition; ('@(ResolvedSDKReference)'!='') was evaluated as (''!='').
+5>Done building target "ExpandSDKReferences" in project "MicroSimFramework.csproj".
+5>Target "PlatformCheck" in file "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework\MicroSimFramework.csproj" (target "ResolveAssemblyReferences" depends on it):
+5>Task "Error"
+5>c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\packages\CefSharp.Common.53.0.0\build\CefSharp.Common.targets(4,5): error : CefSharp.Common will work out of the box if you specify platform (x86 / x64). For AnyCPU Support see https://github.com/cefsharp/CefSharp/issues/1714
+5>Done executing task "Error" -- FAILED.
+5>Done building target "PlatformCheck" in project "MicroSimFramework.csproj" -- FAILED.
+5>Target "_CheckForCompileOutputs" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework\MicroSimFramework.csproj" (target "_CleanGetCurrentAndPriorFileWrites" depends on it):
+5>Done building target "_CheckForCompileOutputs" in project "MicroSimFramework.csproj".
+5>Target "_SGenCheckForOutputs" skipped, due to false condition; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) was evaluated as ('Off' == 'On' or (''!='' and 'Off' == 'Auto')).
+5>Target "_CleanGetCurrentAndPriorFileWrites" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework\MicroSimFramework.csproj" (target "_CleanRecordFileWrites" depends on it):
+5>Task "ReadLinesFromFile"
+5>Done executing task "ReadLinesFromFile".
+5>Task "ConvertToAbsolutePath"
+5>Done executing task "ConvertToAbsolutePath".
+5>Task "FindUnderPath"
+5>  Comparison path is "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework".
+5>Done executing task "FindUnderPath".
+5>Task "FindUnderPath"
+5>  Comparison path is "bin\Debug\".
+5>Done executing task "FindUnderPath".
+5>Task "FindUnderPath"
+5>  Comparison path is "obj\Debug\".
+5>Done executing task "FindUnderPath".
+5>Task "RemoveDuplicates"
+5>Done executing task "RemoveDuplicates".
+5>Done building target "_CleanGetCurrentAndPriorFileWrites" in project "MicroSimFramework.csproj".
+5>Target "_CleanRecordFileWrites" in file "C:\Program Files (x86)\MSBuild\12.0\bin\Microsoft.Common.CurrentVersion.targets" from project "c:\Users\dburk\EGYETEM\Corvinus\Gazdaságinformatikus\PhD\Disszertáció\MikroSzimuláció\MicroSimFramework\MicroSimFramework\MicroSimFramework.csproj" (target "CoreBuild" depends on it):
+5>Task "RemoveDuplicates"
+5>Done executing task "RemoveDuplicates".
+5>Task "MakeDir"
+5>Done executing task "MakeDir".
+5>Task "WriteLinesToFile"
+5>Done executing task "WriteLinesToFile".
+5>Done building target "_CleanRecordFileWrites" in project "MicroSimFramework.csproj".
+5>
+5>Build FAILED.
+5>
+5>Time Elapsed 00:00:00.09
+========== Build: 0 succeeded, 5 failed, 0 up-to-date, 0 skipped ==========
